@@ -64,7 +64,7 @@ h3{
 
 @media screen and (max-width:759px){
     .swiper-slide{
-        display:grid;
+        display:grid !important;
         grid-template-rows: auto auto;
         grid-template-columns: .5fr 2fr .5fr;
         grid-row-gap: 20px;
