@@ -11,7 +11,7 @@ nav_order: 2
 />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-- <a href="/index.md">1</a> <a href="/style-2.md">2</a>
+- <a href="/index">1</a> <a href="/style-2">2</a>
 
 <!-- Slider main container -->
 <div class="swiper">
