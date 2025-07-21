@@ -20,7 +20,6 @@ body {
 .swiper {
     width: 100%;
     height: 100%;
-    cursor: grab;
   }
 
   .swiper-slide {
@@ -54,30 +53,10 @@ body {
 
 h3{
     font-size: 25px;
-    font-weight:300;
+    font-weight:600;
 }
 
 .event-details{
     text-align:left;
     margin-top:10px;
-}
-
-@media screen and (max-width:759px){
-    .swiper-slide{
-        display:grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: .5fr 2fr .5fr;
-        grid-row-gap: 20px;
-        grid-column-gap: 20px;
-        grid-auto-columns: 1fr;
-    }
-    .event-banner{
-        grid-column:1;
-        grid-row:1;
-    }
-    .event-details{
-        grid-column:2;
-        grid-row:1;
-    }
-
 }
