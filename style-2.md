@@ -16,7 +16,12 @@ nav_order: 2
 <!-- Slider main container -->
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">
+      <img class="event-banner" src="https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1743543001.png">
+      <div class="event-details">
+      <h3 class="event-title">Zines as Critical Data</h3>
+      </div>
+      </div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>
       <div class="swiper-slide">Slide 4</div>
