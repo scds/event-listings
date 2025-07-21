@@ -61,14 +61,15 @@ nav_order: 2
         });
     }
 }
-    // Initialize on page load
-    $(document).ready(function() {
-        initSwiper();
-    });
 
-    // Also initialize on window resize
-    $(window).resize(function() {
-        initSwiper();
-    });
+// Initialize on page load
+$(document).ready(function() {
+    initSwiper();
+});
+
+// Also initialize on window resize
+$(window).resize(function() {
+    initSwiper();
+});
     
 </script>
