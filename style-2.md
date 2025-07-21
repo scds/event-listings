@@ -8,7 +8,7 @@ nav_order: 2
   rel="stylesheet"
   href="./assets/css/swiper.css"
 />
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./assets/javascript/swiper-bundle.min.js"></script>
 
 - <a href="/index">1</a> <a href="/style-2">2</a>
@@ -30,12 +30,28 @@ nav_order: 2
   </div>
 
 <script>
-    var swiper = new Swiper(".mySwiper", {
+     $(window).resize(function() {
+        if ($(window).width() < 960) {
+            var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+    });
+        }
+        else {
+            var swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 20,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
     });
+        }
+    });
+    
+    
 </script>

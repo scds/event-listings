@@ -28,6 +28,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius:3.6rem;
+    padding: 20px;
   }
 
   .swiper-slide img {
