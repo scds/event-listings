@@ -51,9 +51,6 @@ plugins:
 
 # Google Analytics Tracking
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
-license_url: "http://creativecommons.org/licenses/by/4.0/"
-license_name: "Creative Commons Attribution 4.0 International License"
-license_image_url: "https://i.creativecommons.org/l/by/4.0/88x31.png"
 
 # Callout titles an colors
 callouts_level: quiet # or loud

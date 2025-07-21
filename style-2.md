@@ -35,28 +35,41 @@ nav_order: 2
   </div>
 
 <script>
-     $(window).resize(function() {
-        if ($(window).width() < 960) {
-            var swiper = new Swiper(".mySwiper", {
+     function initSwiper() {
+    // Destroy existing Swiper instance if it exists
+    if (this.swiper) {
+        this.swiper.destroy();
+    }
+    
+    if ($(window).width() < 760) {
+        this.swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 20,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
-    });
-        }
-        else {
-            var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-        }
-    });
-    
+        });
+    } else {
+        this.swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    }
+}
+
+// Initialize on page load
+$(document).ready(function() {
+    initSwiper();
+});
+
+// Also initialize on window resize
+$(window).resize(function() {
+    initSwiper();
+});
     
 </script>
