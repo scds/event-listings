@@ -1,0 +1,22 @@
+:root{
+    --light-green: #e4ea6c;
+    --dark-grey: #313844;
+    --dark-green: #0d5d78;
+    --light-blue: #aad5e1;
+    --light-grey: #dbdbdd;
+    --burgundy: #7A003B;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    padding-bottom: 0;
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+  }

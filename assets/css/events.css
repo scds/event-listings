@@ -101,6 +101,7 @@ h3{
 .event-description{
     grid-column:2;
     grid-row:2;
+    padding:10px;
 }
 
 .event-corner-time-cell{

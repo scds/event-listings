@@ -1,10 +1,12 @@
 ---
 layout: minimal
 title: Upcoming SCDS Events
-nav_order: 2 
+nav_order: 1 
 ---
 
 <link rel="stylesheet" href="./assets/css/events.css">
+
+<a href="/index.md">1</a> <a href="/style-2.md">2</a>
 
 <div class= "event-wrapper">
   <div class="event-left-cell">
