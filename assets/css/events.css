@@ -17,8 +17,8 @@ body {
 }
 
 h3{
-    font-size: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.625), 2.25rem);
-    font-weight:600;
+    font-size: 25px !important;
+    margin-top:0px !important;
 }
 
 
@@ -28,7 +28,7 @@ h3{
     font-family: "Arial";
     margin-bottom: 30px;
     grid-template-rows: auto auto;
-    grid-template-columns: .5fr 1.5fr;
+    grid-template-columns: .5fr 2fr .5fr;
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     grid-auto-columns: 1fr;
@@ -37,8 +37,7 @@ h3{
 
 
 .event-banner{
-    margin-top:7px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .right-col{
@@ -48,7 +47,7 @@ h3{
     vertical-align: top;
 }
 
-.event-date-time-cell{
+.event-left-cell{
     grid-column: 1;
     grid-row:1;
     align-items: flex-end;
@@ -59,11 +58,11 @@ h3{
 }
 
 .event-register-cell{
-    grid-column: 1;
-    grid-row:2;
+    grid-column: 3;
+    grid-row: 2;
     justify-content: flex-end;
     display: flex;
-    align-self:end;
+    align-self: end;
 }
 
 .event-category{
@@ -102,4 +101,35 @@ h3{
 .event-description{
     grid-column:2;
     grid-row:2;
+}
+
+.event-corner-time-cell{
+    grid-column: 3;
+    grid-row:1;
+    align-items: flex-end;
+    padding-top:10px;
+    vertical-align: top;
+    align-content: flex-end;
+    text-align: right;
+}
+
+.event-location{
+    grid-column:1;
+    grid-row:2;
+    text-align: right;
+}
+
+@media screen and (max-width:700px){
+    .event-left-cell, .event-location{
+        display:none;
+    }
+    .event-wrapper{
+        grid-template-columns: 2fr .5fr;
+    }
+    .event-register-cell,.event-corner-time-cell{
+        grid-column: 2;
+    }
+    .right-col,.event-description{
+        grid-column: 1;
+    }
 }
