@@ -25,7 +25,7 @@ nav_order: 2
         <div class="event-time">4:00PM</div>
         <div class="event-location"></div>
       </div>
-      <details class="detail-accordion" open>
+      <details class="detail-accordion">
       <summary>Details</summary>
       Ready to shake up the ways we think about and create data culture(s)? For the past 4 months, CMSTMM 720: Data Culture(s) graduate students have been focused on planning, researching and producing zines that disrupt conventional understandings of data culture(s).  
     Explore how zines are a platform for crafting primary sources to enhance research, teaching, and learning! 
