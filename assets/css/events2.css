@@ -11,11 +11,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: white;
-    padding-bottom: 0;
-}
-
 
 .swiper {
     width: 100%;

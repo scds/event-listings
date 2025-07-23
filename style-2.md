@@ -3,11 +3,12 @@ layout: minimal
 title: Upcoming SCDS Events Style 2
 nav_order: 2 
 ---
-<link rel="stylesheet" href="./assets/css/events2.css">
+
 <link
   rel="stylesheet"
   href="./assets/css/swiper.css"
 />
+<link rel="stylesheet" href="./assets/css/events2.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./assets/javascript/swiper-bundle.min.js"></script>
 
