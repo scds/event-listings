@@ -35,6 +35,25 @@ nav_order: 2
   </div>
 
 <script>
+  if ($(window).width() < 960) {
+            var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+    });
+  else {
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+});
+
      $(window).resize(function() {
         if ($(window).width() < 960) {
             var swiper = new Swiper(".mySwiper", {
@@ -46,15 +65,15 @@ nav_order: 2
             },
     });
         }
-        else {
-            var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+      else {
+          var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+  });
         }
     });
     
