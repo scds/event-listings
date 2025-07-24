@@ -85,12 +85,18 @@ h3{
   margin-top:0px;
 }
 
+.event-register-cell{
+  justify-content: flex-end;
+  display: flex;
+  align-self: end;
+}
+
 .register-button{
   transition:0.3s;
   align-items:center;
   color:#313844;
   border-radius: 5rem;
-  padding: .5rem 3.1rem;
+  padding: .5rem 1rem;
   margin-top:0px;
   border: 1px solid #313844;
 }
