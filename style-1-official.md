@@ -16,31 +16,41 @@ nav_order: 1
   const calendarPageUrl = "https://libcal.mcmaster.ca/calendar/scds?cid=7565&t=d&d=0000-00-00&cal=7565&ct=33846&inc=0";
   const proxy = "https://api.allorigins.win/raw?url=";
 
-  const proxy = "https://api.allorigins.win/raw?url=";
-
-async function fetchEvents() {
-  const res = await fetch(proxy + encodeURIComponent(icalUrl));
-  const text = await res.text();
-  const jcalData = ICAL.parse(text);
-  const comp = new ICAL.Component(jcalData);
-  const vevents = comp.getAllSubcomponents("vevent");
-  return vevents.map(evt => {
-    const e = new ICAL.Event(evt);
-    return {
-      summary: e.summary,
-      description: e.description,
-      location: e.location,
-      start: e.startDate.toJSDate()
-    };
-  });
-}
+  async function fetchEvents() {
+    try {
+      const res = await fetch(proxy + encodeURIComponent(icalUrl));
+      if (!res.ok) throw new Error("Failed to fetch iCal feed");
+      const text = await res.text();
+      const jcalData = ICAL.parse(text);
+      const comp = new ICAL.Component(jcalData);
+      const vevents = comp.getAllSubcomponents("vevent");
+      return vevents.map(evt => {
+        const e = new ICAL.Event(evt);
+        return {
+          summary: e.summary,
+          description: e.description,
+          location: e.location,
+          start: e.startDate.toJSDate()
+        };
+      });
+    } catch (e) {
+      console.error("Error fetching events:", e);
+      throw e;
+    }
+  }
 
   async function fetchThumbnails() {
-    const res = await fetch(proxy + encodeURIComponent(calendarPageUrl));
-    const html = await res.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, "text/html");
-    return Array.from(doc.querySelectorAll(".img-thumbnail")).map(img => img.src);
+    try {
+      const res = await fetch(proxy + encodeURIComponent(calendarPageUrl));
+      if (!res.ok) throw new Error("Failed to fetch thumbnails page");
+      const html = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      return Array.from(doc.querySelectorAll(".img-thumbnail")).map(img => img.src);
+    } catch (e) {
+      console.error("Error fetching thumbnails:", e);
+      return [];
+    }
   }
 
   function formatDateTime(date) {
@@ -55,11 +65,9 @@ async function fetchEvents() {
       const [events, thumbnails] = await Promise.all([fetchEvents(), fetchThumbnails()]);
       const container = document.getElementById("events-container");
       container.innerHTML = "";
-
       events.sort((a, b) => a.start - b.start).forEach((event, index) => {
         const { date, time } = formatDateTime(event.start);
         const thumb = thumbnails[index] || "https://via.placeholder.com/400x200?text=No+Image";
-
         const html = `
           <div class="event-wrapper">
             <div class="event-left-cell">
@@ -81,8 +89,7 @@ async function fetchEvents() {
           </div>`;
         container.insertAdjacentHTML("beforeend", html);
       });
-    } catch (error) {
-      console.error("Error rendering events:", error);
+    } catch (e) {
       document.getElementById("events-container").textContent = "Failed to load events.";
     }
   }
