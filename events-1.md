@@ -6,12 +6,15 @@ nav_order: 1
 
 <link rel="stylesheet" href="./assets/css/events.css">
 
-<a href="/index">1</a> <a href="/style-2">2</a>
+- <a href="/index">Template 1</a>
+- <a href="/style-2">Template 2</a>
+- <a href="/events-1">Template 1 + Events</a>
+- <a href="/events-2">Template 2 + Events</a>
 
 {% for event in site.data.events %}
 <div class="event-wrapper">
   <div class="event-left-cell">
-    <img class="event-banner" src="/assets/images/default-thumb.jpg" alt="Event Thumbnail">
+    <img class="event-banner" src="{{ event.location }}" alt="Event Thumbnail">
   </div>
 
   <div class="event-location">{{ event.location }}</div>

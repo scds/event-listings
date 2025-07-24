@@ -6,7 +6,10 @@ nav_order: 1
 
 <link rel="stylesheet" href="./assets/css/events.css">
 
-<a href="/index">1</a> <a href="/style-2">2</a>
+- <a href="/index">Template 1</a>
+- <a href="/style-2">Template 2</a>
+- <a href="/events-1">Template 1 + Events</a>
+- <a href="/events-2">Template 2 + Events</a>
 
 <div class= "event-wrapper">
   <div class="event-left-cell">
