@@ -19,6 +19,7 @@
   "homepage": "https://github.com/scds/event-listings#readme",
   "dependencies": {
     "ical": "^0.8.0",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "rrule": "^2.8.1"
   }
 }
