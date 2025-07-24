@@ -65,7 +65,7 @@ $(document).ready(function() {
   }
 else {
     var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2.5,
+    slidesPerView: 4,
     spaceBetween: 20,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -96,7 +96,7 @@ $(window).resize(function() {
   }
 else {
     var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2.5,
+    slidesPerView: 4,
     spaceBetween: 20,
     navigation: {
         nextEl: ".swiper-button-next",
