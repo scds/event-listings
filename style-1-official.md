@@ -1,32 +1,43 @@
 ---
 layout: minimal
 title: Upcoming SCDS Events
-nav_order: 1 
+nav_order: 1
 ---
 
-<link rel="stylesheet" href="./assets/css/events.css">
+<link rel="stylesheet" href="/assets/css/events.css">
 
 <a href="/index">1</a> <a href="/style-2">2</a>
 
-{% for event in site.data.events %}
+{% assign events = site.data.events %}
+{% assign sorted_events = events | sort: "start" %}
+
+{% for event in sorted_events %}
 <div class="event-wrapper">
   <div class="event-left-cell">
-    <img class="event-banner" src="/assets/images/default-thumb.jpg" alt="Event Thumbnail">
+    <img class="event-banner" src="/assets/images/default-banner.jpg" alt="Event banner">
   </div>
 
-  <div class="event-location">{{ event.location }}</div>
+  <div class="event-location">
+    {{ event.location }}
+  </div>
 
   <div class="event-register-cell">
-     <a href="#" class="register-button">Register</a>
+    {% if event.url %}
+      <a href="{{ event.url }}" class="register-button" target="_blank" rel="noopener">Register</a>
+    {% else %}
+      <span class="register-button disabled">No Link</span>
+    {% endif %}
   </div>
-  
+
   <div class="right-col">
     <h3 class="event-title">{{ event.title }}</h3>
-    <span class="event-category">SCDS</span>
+    <span class="event-category">SCDS Event</span>
   </div>
-  
-  <div class="event-description">{{ event.description }}</div>
-  
+
+  <div class="event-description">
+    {{ event.description }}
+  </div>
+
   <div class="event-corner-time-cell">
     <div class="event-date">{{ event.start | date: "%B %d, %Y" }}</div>
     <div class="event-time">{{ event.start | date: "%I:%M %p" }}</div>
