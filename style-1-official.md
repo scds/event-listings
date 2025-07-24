@@ -33,7 +33,8 @@ nav_order: 1
   }
 
   async function fetchThumbnails() {
-    const proxy = "https://corsproxy.io/?"; // Use a public proxy to bypass CORS
+    const proxy = "https://api.allorigins.win/raw?url=";
+ // Use a public proxy to bypass CORS
     const page = await fetch(proxy + encodeURIComponent(calendarPageUrl));
     const html = await page.text();
     const parser = new DOMParser();
