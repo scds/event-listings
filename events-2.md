@@ -20,26 +20,20 @@ nav_order: 2
 <!-- Slider main container -->
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-      <img class="event-banner" src="https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1743543001.png">
-      <div class="event-details">
-        <h3 class="event-title">Zines as Critical Data</h3>
-        <div class="event-date">April 15 2025</div>
-        <div class="event-time">4:00PM</div>
-        <div class="event-location"></div>
-      </div>
-      <div class="event-register-cell">
-     <a href="#" class="register-button">Register</a>
-  </div>
-      </div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+{% for event in site.data.events %}
+<div class="swiper-slide">
+        <img class="event-banner" src="{{ event.image }}">
+        <div class="event-details">
+          <h3 class="event-title">{{ event.title }}</h3>
+          <div class="event-date">{{ event.start | date: "%B %d, %Y" }}</div>
+          <div class="event-time">{{ event.start | date: "%I:%M %p" }}</div>
+          <div class="event-location"></div>
+        </div>
+        <div class="event-register-cell">
+          <a href="{{ event.url }}" class="register-button">Register</a>
+        </div>
+    </div>
+{% endfor %}
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
