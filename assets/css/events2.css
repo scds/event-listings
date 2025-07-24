@@ -24,7 +24,7 @@
   display: block;
   justify-content: center;
   align-items: center;
-  border-radius:0.5rem;
+  border-radius:2rem;
   padding: 20px;
   color: #000;
 
@@ -95,7 +95,7 @@ h3{
   transition:0.3s;
   align-items:center;
   color:#313844;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   padding: .5rem 1rem;
   margin-top:0px;
   border: 1px solid #313844;
