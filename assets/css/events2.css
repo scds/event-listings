@@ -42,7 +42,6 @@
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
   object-fit:contain;
   border-radius: 0.5rem;
 }
@@ -107,6 +106,12 @@ h3{
   color: #fff;
   align-items:center;
   text-decoration: none;
+}
+
+@media screen and (min-width: 960px){
+  .swiper-slide{
+    height:365px;
+  }
 }
 
 @media screen and (max-width: 959px){

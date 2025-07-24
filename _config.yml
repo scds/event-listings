@@ -10,8 +10,8 @@ ga_tracking: "" # *** This needs to be set up in Google Analytics once you know 
 
 
 
-github_repo_url: "" # *** Enter workshop URL (in github pages) here
-gh_edit_repository: "" # *** Enter the github URL for your repo
+github_repo_url: "https://scds.github.io/event-listings/" # *** Enter workshop URL (in github pages) here
+gh_edit_repository: "https://github.com/scds/event-listings" # *** Enter the github URL for your repo
 
 navigation: false
 
