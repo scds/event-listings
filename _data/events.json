@@ -138,5 +138,25 @@
     "location": "Sherman Centre for Digital Scholarship (1st Floor, Mills Library)",
     "url": "https://libcal.mcmaster.ca/calendar/scds/intro-qgis-2",
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753391361.png"
+  },
+  {
+    "uid": "LibCal-7565-3919883",
+    "title": "Tracking the Impact of Non-Traditional Research Outputs",
+    "start": "2026-01-21T16:00:00.000Z",
+    "end": "2026-01-21T17:00:00.000Z",
+    "description": "From datasets and code to podcasts, reports, and performances, not all research outputs take the form of journal articles or books. These are known as Non-Traditional Research Outputs (NTROs)—scholarly or creative works that fall outside conventional academic publishing. While NTROs make up a significant and growing part of research activity, they are often under-recognized in systems that track and assess research impact. In this webinar, participants will explore current best practices for tracking and expressing the impact of NTROs and learn how these practices align with movements, like the San Francisco Declaration on Research Assessment (DORA), advocating for more responsible research assessment.\n\nParticipants will learn how to:\n\n\n\tCreate persistent identifiers (e.g. DOIs) and metadata records for NTROs.\n\tIncorporate NTROs into existing researcher profile systems (e.g. ORCiD; McMaster Experts).\n\tCommunicate the value of NTROs to responsible research assessment practices.\n\n\nThis session is ideal for researchers, creators, and academic staff working with non-traditional outputs who want to make their work more visible, trackable, and valued.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nJack Young (he/him) is McMaster’s Research Impact Librarian, supporting the use of bibliometric data to enhance the reporting and strategic planning practices of the University’s academic departments, institutes, and researchers.",
+    "location": null,
+    "url": "https://libcal.mcmaster.ca/calendar/scds/ntros",
+    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753392047.png"
+  },
+  {
+    "uid": "LibCal-7565-3919894",
+    "title": "Streamline Your Research Materials Photos",
+    "start": "2026-01-27T18:00:00.000Z",
+    "end": "2026-01-27T19:00:00.000Z",
+    "description": "You've been there--getting home from an incredible research trip to an archive, maps collection, or gallery only to face down thousands of photos all labelled \"IMG50293.png.\" Join Research Data Management Specialist Danica Evering and Data Analysis and Visualization Librarian Subhanya Sivajothy for an overview of Tropy: a free and open-source solution to explore and manage research photos. In this webinar, you will learn how to use Tropy to zoom into details, tag and organize content with metadata, and begin uncovering patterns across your sources. We will also explore how Tropy connects with Zotero for reference management and Omeka for building digital exhibits, offering a full workflow from research to public presentation.\n\nIn this hands-on workshop, participants will learn to:\n\n\n\tUse Tropy to organize, annotate, analyze and manage research materials image collections.\n\tSelect appropriate metadata and implement documentation and tagging systems.\n\tIntegrate Tropy with Zotero and Omeka to cite archival sources and enhance the impact of your research and digital exhibitions.\n\n\nNo prior knowledge of the software will be required but please come with a version of the software downloaded for the demo! We'll be doing some hands-on experimentation with the software to get you familiar with these tools.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nDanica Evering holds broad experience with research support, education, project management, advocacy, and knowledge translation; with fluency in social practice art, healthcare, community research, data, and systems development. Danica supports students, postdocs, faculty, and staff with RDM through the data lifecycle—Data Management Plans, storage and backup, data security, data sharing. With an MA in Media Studies from Concordia, they are interested in fostering RDM within curious scholars and disciplines.\n\nSubhanya Sivajothy (she/her) brings a background of research in data justice, science and technology studies, and environmental humanities. She is currently thinking through participatory data design which allow for visualizations that are empowering for the end user.",
+    "location": null,
+    "url": "https://libcal.mcmaster.ca/calendar/scds/tropy",
+    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753392711.png"
   }
 ]

@@ -12,10 +12,7 @@ nav_order: 2
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./assets/javascript/swiper-bundle.min.js"></script>
 
-- <a href="/index">Template 1</a>
-- <a href="/style-2">Template 2</a>
-- <a href="/events-1">Template 1 + Events</a>
-- <a href="/events-2">Template 2 + Events</a>
+<a href="/index">Template 1</a> <a href="/style-2">Template 2</a> <a href="/events-1">Template 1 + Events</a> <a href="/events-2">Template 2 + Events</a>
 
 <!-- Slider main container -->
 <div class="swiper mySwiper">
