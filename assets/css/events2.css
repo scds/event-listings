@@ -61,6 +61,25 @@ h3{
   text-align:left;
 }
 
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  border-radius:50%;
+  width: 40px;
+  height: 40px;
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:  var(--light-blue);
+  background-color:var(--dark-grey);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size:20px;
+}
+
 @media screen and (max-width: 959px){
   .swiper-slide{
     display:grid !important;
