@@ -25,13 +25,9 @@ nav_order: 2
         <div class="event-time">4:00PM</div>
         <div class="event-location"></div>
       </div>
-      <details class="detail-accordion">
-      <summary>Details</summary>
-      Ready to shake up the ways we think about and create data culture(s)? For the past 4 months, CMSTMM 720: Data Culture(s) graduate students have been focused on planning, researching and producing zines that disrupt conventional understandings of data culture(s).  
-    Explore how zines are a platform for crafting primary sources to enhance research, teaching, and learning! 
-    Participate in reflective discussions on entrenched assumptions about scholarship, authorship, and editorial privilege!  
-    Attend in person and make a mini zine! 
-     </details>
+      <div class="event-register-cell">
+     <a href="#" class="register-button">Register</a>
+  </div>
       </div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>

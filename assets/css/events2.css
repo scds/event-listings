@@ -80,6 +80,29 @@ h3{
   font-size:20px;
 }
 
+
+.main-content h3{
+  margin-top:0px;
+}
+
+.register-button{
+  transition:0.3s;
+  align-items:center;
+  color:#313844;
+  border-radius: 5rem;
+  padding: .5rem 3.1rem;
+  margin-top:0px;
+  border: 1px solid #313844;
+}
+
+.register-button:hover{
+  transition: 0.3s;
+  background-color: #000;
+  color: #fff;
+  align-items:center;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 959px){
   .swiper-slide{
     display:grid !important;
@@ -109,5 +132,12 @@ h3{
   .detail-accordion{
     grid-column:2;
     grid-row:2;
+  }
+  .event-register-cell{
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: flex-end;
+    display: flex;
+    align-self: end;
   }
 }
