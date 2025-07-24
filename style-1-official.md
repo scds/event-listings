@@ -16,22 +16,24 @@ nav_order: 1
   const calendarPageUrl = "https://libcal.mcmaster.ca/calendar/scds?cid=7565&t=d&d=0000-00-00&cal=7565&ct=33846&inc=0";
   const proxy = "https://api.allorigins.win/raw?url=";
 
-  async function fetchEvents() {
-    const res = await fetch(icalUrl);
-    const text = await res.text();
-    const jcalData = ICAL.parse(text);
-    const comp = new ICAL.Component(jcalData);
-    const vevents = comp.getAllSubcomponents("vevent");
-    return vevents.map(evt => {
-      const e = new ICAL.Event(evt);
-      return {
-        summary: e.summary,
-        description: e.description,
-        location: e.location,
-        start: e.startDate.toJSDate()
-      };
-    });
-  }
+  const proxy = "https://api.allorigins.win/raw?url=";
+
+async function fetchEvents() {
+  const res = await fetch(proxy + encodeURIComponent(icalUrl));
+  const text = await res.text();
+  const jcalData = ICAL.parse(text);
+  const comp = new ICAL.Component(jcalData);
+  const vevents = comp.getAllSubcomponents("vevent");
+  return vevents.map(evt => {
+    const e = new ICAL.Event(evt);
+    return {
+      summary: e.summary,
+      description: e.description,
+      location: e.location,
+      start: e.startDate.toJSDate()
+    };
+  });
+}
 
   async function fetchThumbnails() {
     const res = await fetch(proxy + encodeURIComponent(calendarPageUrl));
