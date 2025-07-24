@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   try {
     // 1. Fetch iCal data
     container.innerHTML = '<p>Fetching calendar data...</p>';
-    const icalUrl = 'https://libcal.mcmaster.ca/ical_subscribe.php?src=p&cid=7565';
+    const icalUrl = 'https://cors-anywhere.herokuapp.com/https://libcal.mcmaster.ca/ical_subscribe.php?src=p&cid=7565';
     const icalResponse = await fetch(icalUrl);
     
     if (!icalResponse.ok) {
