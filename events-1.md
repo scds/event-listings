@@ -14,7 +14,7 @@ nav_order: 1
 {% for event in site.data.events %}
 <div class="event-wrapper">
   <div class="event-left-cell">
-    <img class="event-banner" src="{{ event.location }}" alt="Event Thumbnail">
+    <img class="event-banner" src="{{ event.image }}" alt="Event Thumbnail">
   </div>
 
   <div class="event-location">{{ event.location }}</div>
