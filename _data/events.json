@@ -206,5 +206,18 @@
       "Returning"
     ],
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753392711.png"
+  },
+  {
+    "uid": "LibCal-7565-3920106",
+    "title": "Creating Data Visualizations with Javascript",
+    "start": "2026-03-26T17:00:00.000Z",
+    "end": "2026-03-26T18:30:00.000Z",
+    "description": "Ready to bring your data to life? This hands-on workshop will equip you with the essential skills to transform data into compelling and interactive visualizations using Plotly.js, a powerful open-source graphing library. In this introductory session, we’ll use Plotly to create a range of common chart types and gradually build skills toward more advanced and customized visualizations.\n\nParticipants will learn how to:\n\n\n\tUnderstand the basic building blocks of creating data visualizations with Plotly.\n\tApply Plotly's fundamental syntax to generate distinct chart types from provided datasets, accurately representing the underlying data.\n\tAnalyze a given dataset and select the most appropriate Plotly chart type for effective visual communication based on data characteristics and visualization best practices.\n\n\nNo prior Plotly experience is required, but basic Javascript familiarity is recommended. This session is ideal for data enthusiasts, researchers, developers, and anyone looking to create dynamic, web-based visualizations to communicate data insights effectively.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nSubhanya (she/her) brings a background of research in data justice, science and technology studies, and environmental humanities. She is currently thinking through participatory data design which allow for visualizations that are empowering for the end user.",
+    "location": null,
+    "url": "https://libcal.mcmaster.ca/calendar/scds/DataVizJavascript",
+    "categories": [
+      "New"
+    ],
+    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753404098.png"
   }
 ]
