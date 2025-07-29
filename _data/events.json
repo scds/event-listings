@@ -1,18 +1,5 @@
 [
   {
-    "uid": "LibCal-7565-3920895",
-    "title": "Build Your Own Chatbot: Local Applications in Generative AI on your Laptop",
-    "start": "2025-09-17T18:00:00.000Z",
-    "end": "2025-09-17T19:30:00.000Z",
-    "description": "Most people know cloud-based generative AI tools like ChatGPT, but did you know that the powerful technology behind them, transformer-based Large Language Models (LLMs), can also run directly on a modern laptop?\n\nIn this hands-on, in-person workshop, you’ll explore how these AI systems work and learn how to set up and run a basic chatbot locally on your own computer. Gain a foundational understanding of transformer-based LLMs and discover how to harness their power without relying on the cloud.\n\nBy the end of this session, participants will be able to:\n\n\n\tUnderstand the core principles behind transformer-based large language models\n\tSet up and run a basic chatbot AI on a personal laptop\n\tExplore practical applications and limitations of locally hosted generative AI\n\n\nThis session is perfect for anyone curious about AI who wants to experiment with running models independently!\n\nDetails: Any preparatory work for the session can be found on its information page. This workshop will not be recorded.\n\nFacilitator Bio: \n\nJohn Fink is the Digital Scholarship Librarian in the Sherman Centre.",
-    "location": "Sherman Centre for Digital Scholarship (1st Floor, Mills Library)",
-    "url": "https://libcal.mcmaster.ca/calendar/scds/build-chatbot",
-    "categories": [
-      "Returning"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753711883.png"
-  },
-  {
     "uid": "LibCal-7565-3916868",
     "title": "Create Simple Maps using Google Maps and Microsoft Excel",
     "start": "2025-09-24T14:30:00.000Z",
@@ -65,19 +52,6 @@
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753416972.png"
   },
   {
-    "uid": "LibCal-7565-3920831",
-    "title": "Introduction to R Programming",
-    "start": "2025-10-16T17:30:00.000Z",
-    "end": "2025-10-16T19:30:00.000Z",
-    "description": "Curious about R but not sure where to start? This beginner-friendly workshop is designed for those with no prior experience in R programming. You’ll get hands-on with RStudio, explore key data types and data structures, and learn how to perform basic data manipulation. By the end, you’ll be able to write and run your own R scripts with confidence.\n\nThis session will take place synchronously and will be recorded and shared publicly for future reference.\n\nIn the workshop, participants will learn to:\n\n\n\tNavigate the RStudio environment\n\tUnderstand and use basic data types and structures in R\n\tWrite and run simple R scripts\n\tPerform basic data manipulation tasks\n\n\nWhether you're working with data in the sciences, humanities, or social sciences, this workshop offers a strong foundation to begin your R programming journey.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nVivek Jadon (he/him) provides research support in the use of numeric research data. As part of his role, Vivek is McMaster University’s official representative for Statistics Canada’s Data Liberation Initiative (DLI) program and Inter-university Consortium for Political and Social Research (ICPSR). Both of these programs provide researchers with vast archive of research data from various disciplines for high quality research and instruction. Vivek is also involved in building awareness and promoting RDM activities/services at McMaster.",
-    "location": null,
-    "url": "https://libcal.mcmaster.ca/calendar/scds/intro-r",
-    "categories": [
-      "Returning"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753708661.png"
-  },
-  {
     "uid": "LibCal-7565-3919817",
     "title": "Establishing and Maintaining Researcher Profiles",
     "start": "2025-10-21T18:00:00.000Z",
@@ -104,36 +78,10 @@
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1752793808.png"
   },
   {
-    "uid": "LibCal-7565-3920874",
-    "title": "Creating High-Quality Documents with LaTeX",
-    "start": "2025-10-23T18:00:00.000Z",
-    "end": "2025-10-23T19:30:00.000Z",
-    "description": "Want more control over how your documents look and function? LaTeX is an open-source typesetting system used to create clean, consistent, and professional documents. It’s especially helpful for working with complex formatting, citations, or mathematical content, and it's a powerful tool for writing reports, articles, and long-form texts in any discipline.\n\nIn this beginner-friendly workshop, you’ll learn the building blocks of LaTeX, including how to format text, structure a document, and write equations. You’ll also walk through the process of creating your first LaTeX document from scratch.\n\nBy the end of this session, participants will be able to:\n\n\n\tIdentify the basic structure and purpose of LaTeX documents\n\tFormat text and write mathematical equations using LaTeX commands\n\tCreate and compile a basic LaTeX document\n\n\nThis session is ideal for students, researchers, and writers in any field who want to explore LaTeX as a powerful alternative to traditional word processors—no prior experience required.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nJohn Fink is the Digital Scholarship Librarian in the Sherman Centre.",
-    "location": null,
-    "url": "https://libcal.mcmaster.ca/calendar/scds/intro-latex",
-    "categories": [
-      "DMDS"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753711419.png"
-  },
-  {
-    "uid": "LibCal-7565-3920834",
-    "title": "Introduction to Data Analysis with SPSS",
-    "start": "2025-10-30T17:30:00.000Z",
-    "end": "2025-10-30T19:30:00.000Z",
-    "description": "Looking for an accessible way to analyze data? SPSS is a widely used statistical software that makes it easy to explore, summarize, and interpret data—no programming required.\n\nThis beginner-friendly workshop introduces SPSS through hands-on activities using its point-and-click interface. You’ll learn how to import data, run basic descriptive statistics, and perform simple analyses like t-tests and correlations.\n\nBy the end of this session, participants will be able to:\n\n\n\tNavigate the SPSS interface and load data\n\tRun descriptive statistics such as means, frequencies, and standard deviations\n\tConduct basic statistical tests (e.g., t-tests, correlations)\n\tInterpret and export results from SPSS\n\n\nThis session is ideal for students, researchers, and staff who want a user-friendly introduction to statistical analysis. No prior experience required!\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nVivek Jadon (he/him) provides research support in the use of numeric research data. As part of his role, Vivek is McMaster University’s official representative for Statistics Canada’s Data Liberation Initiative (DLI) program and Inter-university Consortium for Political and Social Research (ICPSR). Both of these programs provide researchers with vast archive of research data from various disciplines for high quality research and instruction. Vivek is also involved in building awareness and promoting RDM activities/services at McMaster.",
-    "location": null,
-    "url": "https://libcal.mcmaster.ca/calendar/scds/intro-spss",
-    "categories": [
-      "Returning"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753710235.png"
-  },
-  {
     "uid": "LibCal-7565-3918304",
     "title": "Creating Interactive Data Visualizations with Power BI",
-    "start": "2025-11-06T18:00:00.000Z",
-    "end": "2025-11-06T19:30:00.000Z",
+    "start": "2025-11-13T18:00:00.000Z",
+    "end": "2025-11-13T19:30:00.000Z",
     "description": "Want to turn your data into clear, compelling visuals? In this beginner-friendly workshop, you will learn how to use Power BI, a powerful tool for building interactive dashboards and charts. Power BI is freely available to McMaster users, making it a great option for coursework, research, and projects.\n\nIn this session, participants will learn to:\n\n Clean and prepare data\n\n Create impactful visualizations\n\n Explore accessibility and design best practices\n\n Build dashboards that tell your data story\n\nNo previous experience with Power BI is required! This session is great for anyone looking to build confidence in data visualization and make more informed decisions through clear, accessible design.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: Subhanya (she/her) brings a background of research in data justice, science and technology studies, and environmental humanities. She is currently thinking through participatory data design which allow for visualizations that are empowering for the end user.",
     "location": null,
     "url": "https://libcal.mcmaster.ca/calendar/scds/DataPowerBI",
@@ -141,19 +89,6 @@
       "Returning"
     ],
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753210572.png"
-  },
-  {
-    "uid": "LibCal-7565-3920908",
-    "title": "Introduction to Python Programming",
-    "start": "2025-11-13T18:30:00.000Z",
-    "end": "2025-11-13T20:30:00.000Z",
-    "description": "Interested in learning one of the world’s most popular programming languages? Python is beginner-friendly and widely used across many fields for data analysis, automation, and more.\n\nThis hands-on workshop will introduce you to Python’s basic concepts, including data types, variables, and simple operations on numbers and strings. No prior experience with Python is needed.\n\nBy the end of this session, participants will be able to:\n\n\n\tUnderstand fundamental Python data types and variables\n\tPerform basic operations on numbers and strings\n\tWrite simple Python code to manipulate and store data\n\n\nThis session will be recorded and made publicly available. It’s perfect for anyone looking for a practical introduction to Python programming.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nVivek Jadon (he/him) provides research support in the use of numeric research data. As part of his role, Vivek is McMaster University’s official representative for Statistics Canada’s Data Liberation Initiative (DLI) program and Inter-university Consortium for Political and Social Research (ICPSR). Both of these programs provide researchers with vast archive of research data from various disciplines for high quality research and instruction. Vivek is also involved in building awareness and promoting RDM activities/services at McMaster.",
-    "location": null,
-    "url": "https://libcal.mcmaster.ca/calendar/scds/intro-python",
-    "categories": [
-      "Returning"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753714709.png"
   },
   {
     "uid": "LibCal-7565-3918338",
@@ -221,19 +156,6 @@
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753380398.png"
   },
   {
-    "uid": "LibCal-7565-3920907",
-    "title": "Making and Querying Databases in SQL with DuckDB",
-    "start": "2025-11-26T19:00:00.000Z",
-    "end": "2025-11-26T20:30:00.000Z",
-    "description": "Want to work with structured data more efficiently? SQL (Structured Query Language) is a powerful tool for managing and analyzing data and it’s easier to get started than you might think.\n\nThis beginner-friendly workshop introduces SQL using DuckDB, a lightweight, cross-platform database that runs locally and requires no setup. Through hands-on practice, you’ll learn how to create a database, add data to it, and write queries to find the information you need.\n\nBy the end of this session, participants will be able to:\n\n\n\tUnderstand the basic structure and purpose of SQL\n\tCreate and populate a DuckDB database\n\tWrite and run basic SQL queries to explore and extract data\n\n\nThis session is ideal for beginners in data analysis, researchers, and students who want a gentle introduction to databases using a simple and powerful tool. No prior experience required!\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nJohn Fink is the Digital Scholarship Librarian in the Sherman Centre.",
-    "location": null,
-    "url": "https://libcal.mcmaster.ca/calendar/scds/sql-duckdb",
-    "categories": [
-      "DMDS"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/template/1724965047.png"
-  },
-  {
     "uid": "LibCal-7565-3918358",
     "title": "Creating and Sharing Maps using ArcGIS Online",
     "start": "2025-11-27T15:30:00.000Z",
@@ -247,19 +169,6 @@
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753218556.png"
   },
   {
-    "uid": "LibCal-7565-3920839",
-    "title": "Microdata Analysis with Python using Statistics Canada Data",
-    "start": "2025-11-27T18:30:00.000Z",
-    "end": "2025-11-27T20:30:00.000Z",
-    "description": "Interested in working with Canadian survey data? This hands-on workshop introduces participants to data analysis using Public Use Microdata Files (PUMF) from Statistics Canada’s sample surveys.\n\nYou’ll learn how to access, manage, and analyze microdata to uncover meaningful insights. Using sample datasets, we’ll walk through various statistical techniques and give you practical experience in interpreting and presenting your findings.\n\nBy the end of this session, participants will be able to:\n\n\n\t\n\tLocate and access Statistics Canada PUMF dataset\n\t\n\t\n\tOrganize and manage microdata for analysis\n\t\n\t\n\tApply basic statistical techniques to explore the data\n\t\n\t\n\tInterpret and present results with clarity and confidence\n\t\n\n\nThis session is ideal for students, faculty, staff, and community members interested in Canadian data—no prior experience required.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nVivek Jadon (he/him) provides research support in the use of numeric research data. As part of his role, Vivek is McMaster University’s official representative for Statistics Canada’s Data Liberation Initiative (DLI) program and Inter-university Consortium for Political and Social Research (ICPSR). Both of these programs provide researchers with vast archive of research data from various disciplines for high quality research and instruction. Vivek is also involved in building awareness and promoting RDM activities/services at McMaster.",
-    "location": null,
-    "url": "https://libcal.mcmaster.ca/calendar/scds/microdata-python",
-    "categories": [
-      "New"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753710862.png"
-  },
-  {
     "uid": "LibCal-7565-3919685",
     "title": "Best Practices for Managing Data in your Research",
     "start": "2026-01-14T15:30:00.000Z",
@@ -271,19 +180,6 @@
       "Research Data Management"
     ],
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753381862.png"
-  },
-  {
-    "uid": "LibCal-7565-3920896",
-    "title": "Introduction to R Programming",
-    "start": "2026-01-15T18:30:00.000Z",
-    "end": "2026-01-15T20:30:00.000Z",
-    "description": "Curious about R but not sure where to start? This beginner-friendly workshop is designed for those with no prior experience in R programming. You’ll get hands-on with RStudio, explore key data types and data structures, and learn how to perform basic data manipulation. By the end, you’ll be able to write and run your own R scripts with confidence.\n\nThis session will take place synchronously and will be recorded and shared publicly for future reference.\n\nIn the workshop, participants will learn to:\n\n\n\tNavigate the RStudio environment\n\tUnderstand and use basic data types and structures in R\n\tWrite and run simple R scripts\n\tPerform basic data manipulation tasks\n\n\nWhether you're working with data in the sciences, humanities, or social sciences, this workshop offers a strong foundation to begin your R programming journey.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nVivek Jadon (he/him) provides research support in the use of numeric research data. As part of his role, Vivek is McMaster University’s official representative for Statistics Canada’s Data Liberation Initiative (DLI) program and Inter-university Consortium for Political and Social Research (ICPSR). Both of these programs provide researchers with vast archive of research data from various disciplines for high quality research and instruction. Vivek is also involved in building awareness and promoting RDM activities/services at McMaster.",
-    "location": null,
-    "url": "https://libcal.mcmaster.ca/calendar/scds/intro-r2",
-    "categories": [
-      "Returning"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753712350.png"
   },
   {
     "uid": "LibCal-7565-3919873",
@@ -336,19 +232,6 @@
       "Returning"
     ],
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753392711.png"
-  },
-  {
-    "uid": "LibCal-7565-3920898",
-    "title": "Introduction to Data Analysis with SPSS",
-    "start": "2026-01-29T18:30:00.000Z",
-    "end": "2026-01-29T20:30:00.000Z",
-    "description": "Looking for an accessible way to analyze data? SPSS is a widely used statistical software that makes it easy to explore, summarize, and interpret data—no programming required.\n\nThis beginner-friendly workshop introduces SPSS through hands-on activities using its point-and-click interface. You’ll learn how to import data, run basic descriptive statistics, and perform simple analyses like t-tests and correlations.\n\nBy the end of this session, participants will be able to:\n\n\n\tNavigate the SPSS interface and load data\n\tRun descriptive statistics such as means, frequencies, and standard deviations\n\tConduct basic statistical tests (e.g., t-tests, correlations)\n\tInterpret and export results from SPSS\n\n\nThis session is ideal for students, researchers, and staff who want a user-friendly introduction to statistical analysis. No prior experience required!\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nVivek Jadon (he/him) provides research support in the use of numeric research data. As part of his role, Vivek is McMaster University’s official representative for Statistics Canada’s Data Liberation Initiative (DLI) program and Inter-university Consortium for Political and Social Research (ICPSR). Both of these programs provide researchers with vast archive of research data from various disciplines for high quality research and instruction. Vivek is also involved in building awareness and promoting RDM activities/services at McMaster.",
-    "location": null,
-    "url": "https://libcal.mcmaster.ca/calendar/scds/intro-spss2",
-    "categories": [
-      "Returning"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753712801.png"
   },
   {
     "uid": "LibCal-7565-3920119",
@@ -416,19 +299,6 @@
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753411411.png"
   },
   {
-    "uid": "LibCal-7565-3920902",
-    "title": "Introduction to Python Programming",
-    "start": "2026-02-12T18:30:00.000Z",
-    "end": "2026-02-12T20:30:00.000Z",
-    "description": "Interested in learning one of the world’s most popular programming languages? Python is beginner-friendly and widely used across many fields for data analysis, automation, and more.\n\nThis hands-on workshop will introduce you to Python’s basic concepts, including data types, variables, and simple operations on numbers and strings. No prior experience with Python is needed.\n\nBy the end of this session, participants will be able to:\n\n\n\tUnderstand fundamental Python data types and variables\n\tPerform basic operations on numbers and strings\n\tWrite simple Python code to manipulate and store data\n\n\nThis session will be recorded and made publicly available. It’s perfect for anyone looking for a practical introduction to Python programming.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nVivek Jadon (he/him) provides research support in the use of numeric research data. As part of his role, Vivek is McMaster University’s official representative for Statistics Canada’s Data Liberation Initiative (DLI) program and Inter-university Consortium for Political and Social Research (ICPSR). Both of these programs provide researchers with vast archive of research data from various disciplines for high quality research and instruction. Vivek is also involved in building awareness and promoting RDM activities/services at McMaster.",
-    "location": null,
-    "url": "https://libcal.mcmaster.ca/calendar/scds/intro-python2",
-    "categories": [
-      "Returning"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753713400.png"
-  },
-  {
     "uid": "LibCal-7565-3920111",
     "title": "Communities Empowered by Data 101: Tools and Best Practices",
     "start": "2026-02-19T17:00:00.000Z",
@@ -479,19 +349,6 @@
       "New"
     ],
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753413060.png"
-  },
-  {
-    "uid": "LibCal-7565-3920904",
-    "title": "Microdata Analysis with Python using Statistics Canada Data",
-    "start": "2026-04-02T17:30:00.000Z",
-    "end": "2026-04-02T19:30:00.000Z",
-    "description": "Want to learn how to work with rich Canadian survey data? The Public Use Microdata File (PUMF) from Statistics Canada offers detailed microdata from national sample surveys—perfect for uncovering meaningful insights.\n\nIn this hands-on workshop, you’ll learn how to access, manage, and analyze PUMF datasets. Through practical exercises, you’ll explore statistical techniques and develop skills to interpret and present your findings effectively.\n\nBy the end of this session, participants will be able to:\n\n\n\tAccess and navigate Statistics Canada’s PUMF datasets\n\tManage microdata for analysis using common tools\n\tApply basic statistical methods to extract insights\n\tInterpret and communicate results from survey data\n\n\nThis workshop is ideal for students, faculty, staff, and community members interested in exploring national data.\n\nDetails: Any preparatory work for the session can be found on its information page. This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre's Online Learning Catalogue.\n\nFacilitator Bio: \n\nVivek Jadon (he/him) provides research support in the use of numeric research data. As part of his role, Vivek is McMaster University’s official representative for Statistics Canada’s Data Liberation Initiative (DLI) program and Inter-university Consortium for Political and Social Research (ICPSR). Both of these programs provide researchers with vast archive of research data from various disciplines for high quality research and instruction. Vivek is also involved in building awareness and promoting RDM activities/services at McMaster.",
-    "location": null,
-    "url": "https://libcal.mcmaster.ca/calendar/scds/microdata-python2",
-    "categories": [
-      "New"
-    ],
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753713704.png"
   },
   {
     "uid": "LibCal-7565-3920114",
