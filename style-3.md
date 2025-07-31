@@ -13,18 +13,16 @@ nav_order: 1
 {% for event in site.data.events %}
 <div class="event-wrapper">
   
-  <div class="right-col">
-    <h3 class="event-title">{{ event.title }}</h3>
+  <div class="left-col">
     <img class="event-banner" src="{{ event.image }}" alt="Event Thumbnail">
     <div class="event-location">{{ event.location }}</div>
   </div>
   
-  <div class="event-corner-time-cell">
+  <div class="right-col">
+    <h3 class="event-title">{{ event.title }}</h3>
     <div class="event-date">{{ event.start | date: "%B %d, %Y" }}</div>
     <div class="event-time">{{ event.start | date: "%I:%M %p" }}</div>
-  </div>
-   <div class="event-register-cell">
-     <a href="{{ event.url }}" class="register-button">Register</a>
+    <a href="{{ event.url }}" class="register-button">Register</a>
   </div>
 </div>
 {% endfor %}
