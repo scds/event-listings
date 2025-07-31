@@ -23,13 +23,7 @@ nav_order: 1
   
   <div class="right-col">
     <h3 class="event-title">{{ event.title }}</h3>
-    <span class="event-category">
-  {% if event.categories and event.categories.size > 0 %}
-    {{ event.categories | join: ', ' }}
-  {% else %}
-    Uncategorized
-  {% endif %}
-</span>
+    <span class="event-category">SCDS</span>
   </div>
   
   <div class="event-description">{{ event.description }}</div>

@@ -3,16 +3,7 @@ const IcalExpander = require('ical-expander');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
-// Extract categories from an event component
-function extractCategories(component) {
-  const catProp = component.getFirstPropertyValue('categories');
-  if (!catProp) return [];
-  if (typeof catProp === 'string') return catProp.split(',').map(cat => cat.trim());
-  if (Array.isArray(catProp)) return catProp.map(cat => cat.trim());
-  return [];
-}
-
-// Expand recurring and single events from iCal
+// Fetch iCal and expand recurring events
 async function getExpandedEvents() {
   const res = await fetch('https://libcal.mcmaster.ca/ical_subscribe.php?src=p&cid=7565');
   const icalData = await res.text();
@@ -34,8 +25,7 @@ async function getExpandedEvents() {
       end: event.endDate.toJSDate(),
       description: event.description,
       location: event.location,
-      url: event.component.getFirstPropertyValue('url') || '',
-      categories: extractCategories(event.component)
+      url: event.component.getFirstPropertyValue('url') || ''
     });
   });
 
@@ -48,8 +38,7 @@ async function getExpandedEvents() {
       end: occ.endDate.toJSDate(),
       description: occ.item.description,
       location: occ.item.location,
-      url: occ.item.component.getFirstPropertyValue('url') || '',
-      categories: extractCategories(occ.item.component)
+      url: occ.item.component.getFirstPropertyValue('url') || ''
     });
   });
 
@@ -59,7 +48,7 @@ async function getExpandedEvents() {
   return events;
 }
 
-// Scrape image URL from event page
+// Scrape image from event page
 async function fetchImageFromUrl(url) {
   if (!url) return '';
   try {
@@ -73,15 +62,14 @@ async function fetchImageFromUrl(url) {
   }
 }
 
-// Main script
 (async () => {
   const events = await getExpandedEvents();
 
   for (const event of events) {
     event.image = await fetchImageFromUrl(event.url);
-    console.log(`📅 ${event.title}\n🖼️ ${event.image || 'No image'}\n🏷️ ${event.categories.join(', ') || 'No categories'}\n`);
+    console.log(`🖼️ ${event.title}: ${event.image}`);
   }
 
   fs.writeFileSync('_data/events.json', JSON.stringify(events, null, 2));
-  console.log(`✅ Saved ${events.length} events with images and categories to _data/events.json`);
+  console.log(`✅ Saved ${events.length} events with images to _data/events.json`);
 })();
