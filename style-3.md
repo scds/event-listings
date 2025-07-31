@@ -23,7 +23,9 @@ nav_order: 1
     <h3 class="event-title">{{ event.title }}</h3>
     <div class="event-date">{{ event.start | date: "%B %d, %Y" }}</div>
     <div class="event-time">{{ event.start | date: "%I:%M %p" }}</div>
-    <a href="{{ event.url }}" class="register-button">Register</a>
+  </div>
+  <div class="event-register-cell">
+  <a href="{{ event.url }}" class="register-button">Register</a>
   </div>
 </div>
 {% endfor %}

@@ -24,6 +24,7 @@ h3{
 .events-container{
     display:flex;
     flex-flow: wrap;
+    justify-content:center;
 }
 
 .event-wrapper{
@@ -38,6 +39,8 @@ h3{
     grid-auto-columns: 1fr;
     color:#313844;
     width:45%;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 
