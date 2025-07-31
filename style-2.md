@@ -14,6 +14,8 @@ nav_order: 2
 
 - <a href="index">Template 1</a>
 - <a href="style-2">Template 2</a>
+- <a href="style-3">Template 3</a>
+
 
 <!-- Slider main container -->
 <div class="swiper mySwiper">
