@@ -23,7 +23,7 @@ h3{
 
 .events-container{
     display:flex;
-    align-items: center;
+    flex-flow: wrap;
 }
 
 .event-wrapper{
@@ -37,7 +37,7 @@ h3{
     grid-column-gap: 20px;
     grid-auto-columns: 1fr;
     color:#313844;
-    width: 50%;
+    width:45%;
 }
 
 
