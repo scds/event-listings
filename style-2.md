@@ -35,10 +35,10 @@ nav_order: 2
     </div>
 {% endfor %}
     </div>
-    <div class="swiper-button-next"></div>
+  </div>
+  <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
-  </div>
 
 <script>
 $(document).ready(function() {
