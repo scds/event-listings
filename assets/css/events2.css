@@ -110,7 +110,7 @@ h3{
   }
 }
 
-@media screen and (max-width: 959px) and (min-width:601px){
+@media screen and (max-width: 959px) and (min-width:650px){
   .swiper-slide{
     display:grid !important;
     grid-template-rows: auto auto;
@@ -145,8 +145,9 @@ h3{
     display: flex;
     align-self: end;
 }
+}
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 649px){
   .swiper-slide{
     display:grid !important;
     grid-template-rows: auto auto;
