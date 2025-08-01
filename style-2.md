@@ -58,7 +58,7 @@ $(document).ready(function() {
   }
 else {
     var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 20,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -89,7 +89,7 @@ $(window).resize(function() {
   }
 else {
     var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 20,
     navigation: {
         nextEl: ".swiper-button-next",
