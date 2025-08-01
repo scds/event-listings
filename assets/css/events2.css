@@ -177,7 +177,7 @@ h3{
 
   .event-register-cell{
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
     justify-content: flex-end;
     display: flex;
     align-self: end;
