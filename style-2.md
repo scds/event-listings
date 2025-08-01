@@ -41,96 +41,60 @@ nav_order: 2
   </div>
 
 <script>
-$(document).ready(function() {
-      if ($(window).width() < 960) {
-      var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-});
-  }
-  if ($(window).width() > 960 && $(window).width() < 1100) {
-  var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-});
-}
+  var swiper;
 
-else {
-    var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-});
-  }
-    });
-  
-$(window).resize(function() {
-  if ($(window).width() < 960) {
-      var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
+  function initSwiper() {
+    if (swiper) swiper.destroy(true, true); // Destroy existing instance
+
+    var winWidth = $(window).width();
+
+    if (winWidth < 960) {
+      swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
           el: ".swiper-pagination",
           clickable: true,
-      },
-});
-  }
-  if ($(window).width() > 960 && $(window).width() < 1100) {
-  var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      pagination: {
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    } else if (winWidth >= 960 && winWidth < 1100) {
+      swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        pagination: {
           el: ".swiper-pagination",
           clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-});
-}
-else {
-    var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-});
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    } else {
+      swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    }
   }
-});
-    
-    
+
+  $(document).ready(function () {
+    initSwiper();
+  });
+
+  $(window).resize(function () {
+    initSwiper();
+  });
 </script>
