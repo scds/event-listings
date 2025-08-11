@@ -180,9 +180,9 @@ h3{
 
   .event-register-cell{
     grid-column: 1;
-    grid-row: 1;
-    justify-content: flex-end;
+    grid-row: 2;
+    justify-content: flex-start;
     display: flex;
-    align-self: end;
+    align-self: flex-start;
   }
 }
