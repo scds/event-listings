@@ -1,6 +1,6 @@
 ---
 layout: minimal
-title: Upcoming SCDS Events Slider: No Colour
+title: 'Upcoming SCDS Events Slider: No Colour'
 nav_order: 2 
 ---
 
