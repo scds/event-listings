@@ -1,6 +1,6 @@
 ---
 layout: minimal
-title: Upcoming SCDS Events Slider
+title: Upcoming SCDS Events Slider: No Colour
 nav_order: 2 
 ---
 
@@ -8,7 +8,7 @@ nav_order: 2
   rel="stylesheet"
   href="./assets/css/swiper.css"
 />
-<link rel="stylesheet" href="./assets/css/events2.css">
+<link rel="stylesheet" href="./assets/css/events2v2.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./assets/js/swiper-bundle.min.js"></script>
 
@@ -17,7 +17,6 @@ nav_order: 2
 - <a href="style-2.2">Template 2: No colour background</a>
 - <a href="style-2.3">Template 2: Grid</a>
 - <a href="style-3">Template 3</a>
-
 
 <!-- Slider main container -->
 <div class="swiper mySwiper">
