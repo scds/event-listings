@@ -44,6 +44,10 @@ h3{
   font-weight:600;
 }
 
+.main-content-wrapper{
+  padding: 0px !important;
+}
+
 .event-details{
   text-align:left;
   margin-top:10px;
