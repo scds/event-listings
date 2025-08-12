@@ -15,7 +15,7 @@ nav_order: 2
 - <a href="index">Template 1</a>
 - <a href="style-2">Template 2</a>
 - <a href="style-2.2">Template 2: No colour background</a>
-- <a href="style-2.3">Template 2: Grid</a>
+- <a href="style-2-grid">Template 2: Grid</a>
 - <a href="style-3">Template 3</a>
 
 <!-- Slider main container -->
