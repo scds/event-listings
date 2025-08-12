@@ -58,6 +58,7 @@ h3{
 .event-register-cell{
   justify-content: flex-end;
   align-self: end;
+  margin-top:auto;
 }
 
 .register-button{
@@ -79,7 +80,7 @@ h3{
 }
 
 
-@media screen and (max-width: 649px){
+@media screen and (max-width: 670px){
   .swiper-slide{
     display:grid !important;
     grid-template-rows: auto auto;
@@ -111,7 +112,6 @@ h3{
     grid-column: 2;
     grid-row: 1;
     justify-content: flex-end;
-    display: flex;
     align-self: end;
   }
 }
