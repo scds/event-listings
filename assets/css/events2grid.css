@@ -23,7 +23,6 @@
 }
 
 .swiper-slide {
-  cursor:grab;
   text-align: center;
   font-size: 18px;
   display: flex;
