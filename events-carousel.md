@@ -15,8 +15,6 @@ nav_order: 2
 <!-- Slider main container -->
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
 {% for event in site.data.events %}
 <div class="swiper-slide">
         <img class="event-banner" src="{{ event.image }}">
@@ -32,6 +30,8 @@ nav_order: 2
     </div>
 {% endfor %}
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
 
   <!--<div class="swiper-pagination"></div>-->
