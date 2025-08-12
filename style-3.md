@@ -7,10 +7,11 @@ nav_order: 1
 <link rel="stylesheet" href="./assets/css/events3.css">
 
 - <a href="index">Template 1</a>
-- <a href="style-2">Template 2</a>
-- <a href="style-2.2">Template 2: No colour background</a>
-- <a href="style-2-grid">Template 2: Grid</a>
+- <a href="style-2">Template 2 Slider with Coloured Slides</a>
+- <a href="style-2.2">Template 2 Slider with No BG</a>
+- <a href="style-2-grid">Template 2 Grid Style</a>
 - <a href="style-3">Template 3</a>
+
 
 <div class="events-container">
 {% for event in site.data.events %}
