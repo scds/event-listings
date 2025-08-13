@@ -1,53 +1,70 @@
 # search-page
 
-A widget to easily search and explore SCDS workshops.
+A widget to add upcoming SCDS events to scds.ca
 
 ## Purpose
 
-This repository contains a GitHub site of a search widget so that other websites (like scds.ca) can embed it into their pages.
-
-There's an interactive search page version, as well as a non-interactive static text-only page.
+This repository contains a GitHub site of an SCDS events widget so that other websites (like scds.ca) can embed it into their pages. The events are from McMaster's SCDS LibCal, and are not connected through API calls, but through a web scraper script.
 
 ## How to Use
 
-### Adding to a page
+### Adding Events to a Page
 
-To add the search widget to an SCDS WordPress page, use a shortcode block and include the following line:  
-```[iframe src="https://learn.scds.ca/search-page/" width="100%" scrolling="yes" height="850px" ]```
+There are two formats that the events widget is arranged in:
 
-To add the search widget to any other page, use the following iframe code:  
+- (a grid format)["style-2-grid"], to be embedded in (scds.ca/events/)["https://scds.ca/events/"]
+- (a carousel slider format)["events-carousel"] to be embedded in (scds.ca)["https://scds.ca"] home page.
+
+**Carousel Slider**
+
+To add the events carousel slider to an SCDS WordPress page, use a shortcode block and include the following line:  
+```[iframe src="https://learn.scds.ca/event-listings/events-carousel" width="100%" scrolling="no" height="400px" ]```
+
+To add the events carousel to any other page, use the following iframe code:  
 ```html
-<iframe src="https://learn.scds.ca/search-page/" width="100%" scrolling"yes" height="850px">
+<iframe src="https://learn.scds.ca/event-listings/events-carousel" width="100%" scrolling"yes" height="400px">
 </iframe>
 ```
 
-Currently, there's no support to add the text-only page as an automatically resizable widget.
+**Events Grid**
 
-### Adding/updating Workshops
+To add the events grid to an SCDS WordPress page, use a shortcode block and include the following line:  
+```[iframe src="https://learn.scds.ca/event-listings/style-2-grid" width="100%" height="1200px" scroll="yes"]```
 
-To add or update the workshops that are listed in the tool, you have to modify `_data/workshop_list_scratch.csv`. If there are new series (with an acronym) added, `_data/workshop_series.json` must be modified as well.
+To add the events carousel to any other page, use the following iframe code:  
+```html
+<iframe src="https://learn.scds.ca/event-listings/style-2-grid" width="100%" scrolling"yes" height="1200px">
+</iframe>
+```
 
-To modify the CSV, the easiest thing would be to open it in a supporting spreadsheet application (something like Excel can work). From here, you'll see 8 columns: Title, Year, URL, Image, Series, Type, Topic, Software.
 
-- Title: The name of the workshop. Ensure that this does not conflict with any other workshop name. If it does, add the year into the name.
-    - Ex: Intermediate Python Programming (2022-2023) vs Intermediate Python Programming (2023-2024)
-- Year: The year(s) that the workshop was offered. If the webpage has multiple years of the workshop offered, separate options by a semicolon (;) with no spaces.
-    - Ex: `2022-2023;2023-2024` means that the workshop page has recordings for the 2022-2023 year as well as the 2023-2024 year.
-- URL: The direct link to the workshop page.
-- Image: The direct link to the workshop image. To do this, go to the workshop page, right click the image there, "Copy link to image". If workshop has no image, just write `TODO`.
-- Series: The workshop series of the workshop. One of "DMDS", "DASH", "RDM", "DR", "RR", "SFS", "SPECIAL", "DS Bytes", "Events", "LibGuides", "ARL Digital Scholarship Institute", or "Other". If you plan to use any other series (with an acronym), update `workshop_series.json`.
-- Type: Unused in the tool. One (or more) of "Recording", "Asynchronous Workshop", or "Resource".
-- Topic: A list of semicolon separated workshops topics covered by the workshop. Prior to listing options out, look at the search widget to see existing list of topics and try to use these if applicable. Otherwise, feel free to create your own. Keep in mind, tags are case sensitive.
-- Software: A list of semicolon separated softwares used by the workshop. Same as topics. Prior to listing options out, look at the search widget to see existing list of topics and try to use these if applicable. Otherwise, feel free to create your own. Keep in mind, tags are case sensitive. Use "N/A" if workshop does not use any software.
+### Adding/updating Events
 
-### Relavant Backend Search Code
+To add or update the events that are listed, you have to modify `_data/events.json`. 
+
+When an event is over or a new event is added, update the information in `_data/events.json`. This can be done manually or through automation.
+
+In `_data/events.json`, an event will have the following data. To remove the event manually, erase the event's information along with its opening and closing brackets {} and any comma that follows.
+
+- "uid": "LibCal-7565-3920895" (SCDS LibCal ID)
+- "title": The event/workshop title
+- "start": Start time of event in ISO 8601 date and time format.
+- "end": End time of event in ISO 8601 date and time format.
+- "description": Event description
+- "location": Event location
+- "url": LibCal URL of event for registration
+- "image": Image URL of event from the event's LibCal page. Event images are not stored in this event-listings github repository.
+
+  
+
+### Relevant Backend Search Code
 
 If edits to the code are required, see the below.
 
-- `assets/javascript/search-script.js` includes code from here: <https://github.com/christian-fei/Simple-Jekyll-Search>. However, it's been modified to add accessibility features and other SCDS-specific features. This file contains the actual logic for how searching works.
+- `assets/js/fetch-events.js` scrapes data from (SCDS's LibCal)["https://libcal.mcmaster.ca/calendar/scds?cid=7565&t=g&d=0000-00-00&cal=7565&inc=0"], which includes the event image banner, the event link, event time and location.
 - The other file that contains code for the search widget is in `index.md`. This includes how entries should look, as well as some other entries on how searching should work (fuzzy search toggle, limit of searches per load, etc.).
-- `search.json`: an automatically generated file that compiles the CSV workshop list into JSON data that the JavaScript interfaces with. This file is generated when the website is reloaded (aka when commits are made), so no edits should be needed to be done to this file, unless a new label is required to be used. Template language used is Liquid: <https://shopify.github.io/liquid/>.
+- `events.json`: an automatically generated file that compiles the CSV workshop list into JSON data that the JavaScript interfaces with. This file is generated when the website is reloaded (aka when commits are made), so no edits should be needed to be done to this file, unless a new label is required to be used. Template language used is Liquid: <https://shopify.github.io/liquid/>.
 
 ## Credits
 
-Made by Richie Motorgeanu.
+Made by Tram Nguyen.
