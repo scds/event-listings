@@ -1,4 +1,4 @@
-# search-page
+# Event-Listings
 
 A widget to add upcoming SCDS events to scds.ca
 
@@ -12,8 +12,8 @@ This repository contains a GitHub site of an SCDS events widget so that other we
 
 There are two formats that the events widget is arranged in:
 
-- (a grid format)["style-2-grid"], to be embedded in (scds.ca/events/)["https://scds.ca/events/"]
-- (a carousel slider format)["events-carousel"] to be embedded in (scds.ca)["https://scds.ca"] home page.
+- (a grid format)["style-2-grid"], to be embedded in https://scds.ca/events/
+- (a carousel slider format)["events-carousel"] to be embedded in https://scds.ca home page.
 
 **Carousel Slider**
 
@@ -38,13 +38,15 @@ To add the events carousel to any other page, use the following iframe code:
 ```
 
 
-### Adding/updating Events
+### Adding/updating Events Manually
 
 To add or update the events that are listed, you have to modify `_data/events.json`. 
 
 When an event is over or a new event is added, update the information in `_data/events.json`. This can be done manually or through automation.
 
-In `_data/events.json`, an event will have the following data. To remove the event manually, erase the event's information along with its opening and closing brackets {} and any comma that follows.
+In `_data/events.json`, an event will have the following data. To remove the event manually, erase the event's information along with its opening and closing brackets {} and any comma that follows. 
+
+The event's information includes:
 
 - "uid": "LibCal-7565-3920895" (SCDS LibCal ID)
 - "title": The event/workshop title
@@ -54,6 +56,12 @@ In `_data/events.json`, an event will have the following data. To remove the eve
 - "location": Event location
 - "url": LibCal URL of event for registration
 - "image": Image URL of event from the event's LibCal page. Event images are not stored in this event-listings github repository.
+
+### Adding/updating Events Automatically (Must be Done Locally)
+
+Clone this repository onto your computer. Go to your computer's terminal and locate where you want this repository to be cloned.
+
+```cd C:\Users\YourUser\Documents```
 
   
 
