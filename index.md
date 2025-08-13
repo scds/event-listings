@@ -9,7 +9,7 @@ nav_order: 1
 - <a href="events-carousel">Template 2 Slider with No BG</a>
 - <a href="style-2-grid">Template 2 Grid Style</a>
 
-## How to Use
+# How to Use
 
 ### Adding Events to a Page
 
@@ -80,18 +80,22 @@ This will populate `_data/events.json` with updated events information.
 Then type the following in terminal:
 
 ```git commit --all```
+
 The terminal will change to something like the following.
+
 <img src="/assets/img/tut-1-terminal.png">
 
 Type 'a' which will allow you to add a commit message. In this case, it would be `updated events`.
 
 <img src="/assets/img/tut-2-terminal.png">
 
-Once done, press the esc button and type `:wq` and press the Enter button, which will allow you to escape the message window.
+Once done, press the esc button, type `:wq` and press enter, which will allow you to escape the message window.
 
-Then, enter the following in terminal:
+Finally, enter the following in terminal:
 
 ```git push```
+
+Press enter. 
 
 The updated events will now populate onto the event widgets. You're done!
 
@@ -105,4 +109,4 @@ If edits to the code are required, see the below.
 - `events.json`: an automatically generated file that compiles the events information fetched by fetch-events.js. 
 ## Credits
 
-Made by Tram Nguyen.uyen.
+Made by Tram Nguyen.
