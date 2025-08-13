@@ -61,9 +61,36 @@ The event's information includes:
 
 Clone this repository onto your computer. Go to your computer's terminal and locate where you want this repository to be cloned.
 
-```cd C:\Users\YourUser\Documents```
+Install node.js to your computer. Download link is at nodejs.org/en/download
 
-  
+Open your computer terminal and locate the event-listings repository. For example, if event-listings was cloned in your Documents folder, type the following into terminal:
+
+```cd Documents/event-listings/``
+
+Update events by typing the following into the terminal:
+
+```node assets/js/fetch-events.js```
+
+This will populate `_data/events.json` with updated events information.
+
+Then type the following in terminal:
+
+```git commit --all```
+The terminal will change to something like the following.
+<img src="assets/img/tut-1-terminal.png">
+
+Type 'a' which will allow you to add a commit message. In this case, it would be `updated events`.
+
+<img src="assets/img/tut-2-terminal.png">
+
+Once done, press the esc button and type `:wq` and press the Enter button, which will allow you to escape the message window.
+
+Then, enter the following in terminal:
+
+```git push```
+
+The updated events will now populate onto the event widgets. You're done!
+
 
 ### Relevant Backend Search Code
 
