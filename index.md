@@ -9,26 +9,19 @@ nav_order: 1
 - <a href="events-carousel">Template 2 Slider with No BG</a>
 - <a href="style-2-grid">Template 2 Grid Style</a>
 
-# Event-Listings
-
-A widget to add upcoming SCDS events to scds.ca
-
-## Purpose
-
-This repository contains a GitHub site of an SCDS events widget so that other websites (like scds.ca) can embed it into their pages. The events are from McMaster's SCDS LibCal, and are not connected through API calls, but through a web scraper script.
-
 ## How to Use
 
 ### Adding Events to a Page
 
 There are two formats that the events widget is arranged in:
 
-- (a grid format)["style-2-grid"], to be embedded in https://scds.ca/events/
-- (a carousel slider format)["events-carousel"] to be embedded in https://scds.ca home page.
+- [a grid format]("style-2-grid"), to be embedded in https://scds.ca/events/
+- [a carousel slider format]("events-carousel") to be embedded in https://scds.ca home page.
 
 **Carousel Slider**
 
 To add the events carousel slider to an SCDS WordPress page, use a shortcode block and include the following line:  
+
 ```[iframe src="https://learn.scds.ca/event-listings/events-carousel" width="100%" scrolling="no" height="400px" ]```
 
 To add the events carousel to any other page, use the following iframe code:  
@@ -76,7 +69,7 @@ Install node.js to your computer. Download link is at nodejs.org/en/download
 
 Open your computer terminal and locate the event-listings repository. For example, if event-listings was cloned in your Documents folder, type the following into terminal:
 
-```cd Documents/event-listings/``
+```cd Documents/event-listings/```
 
 Update events by typing the following into the terminal:
 
@@ -88,11 +81,11 @@ Then type the following in terminal:
 
 ```git commit --all```
 The terminal will change to something like the following.
-<img src="assets/img/tut-1-terminal.png">
+<img src="/assets/img/tut-1-terminal.png">
 
 Type 'a' which will allow you to add a commit message. In this case, it would be `updated events`.
 
-<img src="assets/img/tut-2-terminal.png">
+<img src="/assets/img/tut-2-terminal.png">
 
 Once done, press the esc button and type `:wq` and press the Enter button, which will allow you to escape the message window.
 
@@ -107,10 +100,9 @@ The updated events will now populate onto the event widgets. You're done!
 
 If edits to the code are required, see the below.
 
-- `assets/js/fetch-events.js` scrapes data from (SCDS's LibCal)["https://libcal.mcmaster.ca/calendar/scds?cid=7565&t=g&d=0000-00-00&cal=7565&inc=0"], which includes the event image banner, the event link, event time and location.
-- The other file that contains code for the search widget is in `index.md`. This includes how entries should look, as well as some other entries on how searching should work (fuzzy search toggle, limit of searches per load, etc.).
-- `events.json`: an automatically generated file that compiles the CSV workshop list into JSON data that the JavaScript interfaces with. This file is generated when the website is reloaded (aka when commits are made), so no edits should be needed to be done to this file, unless a new label is required to be used. Template language used is Liquid: <https://shopify.github.io/liquid/>.
-
+- `assets/js/fetch-events.js` scrapes data from [SCDS's LibCal]("https://libcal.mcmaster.ca/calendar/scds?cid=7565&t=g&d=0000-00-00&cal=7565&inc=0"), which includes the event image banner, the event link, event time and location.
+- `style-2-grid.md` and `events-carousel` and their respective css styles dictate how the events are displayed and styled.
+- `events.json`: an automatically generated file that compiles the events information fetched by fetch-events.js. 
 ## Credits
 
-Made by Tram Nguyen.
+Made by Tram Nguyen.uyen.
