@@ -17,7 +17,7 @@ nav_order: 2
 
 <script>
 (function(){
-  const EVENTS_URL = "{{ '/assets/data/events.json' | relative_url }}"; // ✅ base-aware
+  const EVENTS_URL = "{{ '/_data/events.json' | relative_url }}"; // ✅ base-aware
   const BATCH_SIZE = 12;
 
   let idx = 0;
