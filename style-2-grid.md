@@ -11,11 +11,11 @@ nav_order: 2
 
 <div class="swiper mySwiper">
   <div class="swiper-wrapper" id="eventsWrapper">
-    <!-- Events will be loaded here -->
+    <!-- Events will be injected here -->
   </div>
 </div>
 
-<button id="loadMore" class="load-more-btn">Load More Events</button>
+<button id="loadMore" class="load-more-btn" style="display:none;">Load More Events</button>
 
 <script>
 $(function(){
@@ -23,7 +23,7 @@ $(function(){
   let currentIndex = 0;
   let eventsData = [];
 
-  function loadNextBatch(){
+  function renderBatch(){
     const nextBatch = eventsData.slice(currentIndex, currentIndex + batchSize);
 
     nextBatch.forEach(event => {
@@ -44,19 +44,25 @@ $(function(){
 
     currentIndex += nextBatch.length;
 
-    if(currentIndex >= eventsData.length){
+    if(currentIndex < eventsData.length){
+      $("#loadMore").show();
+    } else {
       $("#loadMore").hide();
     }
   }
 
-  // Fetch events from JSON
+  // Fetch JSON file from public assets folder
   fetch('./assets/data/events.json')
-    .then(res => res.json())
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load events JSON");
+      return response.json();
+    })
     .then(data => {
       eventsData = data;
-      loadNextBatch();
-    });
+      renderBatch(); // show first 12
+    })
+    .catch(err => console.error(err));
 
-  $("#loadMore").on("click", loadNextBatch);
+  $("#loadMore").on("click", renderBatch);
 });
 </script>
