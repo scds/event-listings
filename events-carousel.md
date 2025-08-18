@@ -98,7 +98,7 @@ $(window).resize(function() {
       },
 });
   }
-  else if ($(window).width() > 660 && $(window).width() < 1000) {
+  else if ($(window).width() > 659 && $(window).width() < 1000) {
   var swiper = new Swiper(".mySwiper", {
       slidesPerView: 2,
       spaceBetween: 20,
