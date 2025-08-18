@@ -38,7 +38,7 @@ nav_order: 2
 
 <script>
 $(document).ready(function() {
-      if ($(window).width() < 960) {
+      if ($(window).width() < 660) {
       var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
       spaceBetween: 20,
@@ -52,9 +52,9 @@ $(document).ready(function() {
       },
 });
   }
-  else if ($(window).width() > 960 && $(window).width() < 1100) {
+  else if ($(window).width() > 659 && $(window).width() < 1000) {
   var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 20,
       pagination: {
           el: ".swiper-pagination",
@@ -69,7 +69,7 @@ $(document).ready(function() {
 
 else {
     var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 20,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -84,7 +84,7 @@ else {
     });
   
 $(window).resize(function() {
-  if ($(window).width() < 960) {
+  if ($(window).width() < 660) {
       var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
       spaceBetween: 20,
@@ -98,9 +98,9 @@ $(window).resize(function() {
       },
 });
   }
-  else if ($(window).width() > 960 && $(window).width() < 1100) {
+  else if ($(window).width() > 660 && $(window).width() < 1000) {
   var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 20,
       pagination: {
           el: ".swiper-pagination",
@@ -114,7 +114,7 @@ $(window).resize(function() {
 }
 else {
     var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 20,
     navigation: {
         nextEl: ".swiper-button-next",
