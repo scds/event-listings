@@ -16,7 +16,7 @@ line-height: 1.4;
 }
 
 .swiper {
-  width: 100%;
+  width: 88%;
   height: 100%;
 }
 
@@ -28,7 +28,6 @@ display: block;
 justify-content: center;
 align-items: center;
 border-radius:2rem;
-padding: 20px;
 color: #000;
 }
 

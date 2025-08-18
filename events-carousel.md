@@ -13,6 +13,8 @@ nav_order: 2
 <script src="./assets/js/swiper-bundle.min.js"></script>
 
 <!-- Slider main container -->
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
 {% for event in site.data.events %}
@@ -30,8 +32,6 @@ nav_order: 2
     </div>
 {% endfor %}
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
   </div>
 
   <!--<div class="swiper-pagination"></div>-->
