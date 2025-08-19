@@ -23,12 +23,9 @@ background-color:#313844;
 
 .swiper-slide {
 cursor:grab;
-text-align: center;
 font-size: 18px;
 display: flex;
 flex-direction:column;
-justify-content: center;
-align-items: center;
 border-radius:1rem;
 color: #000;
 padding:10px;
