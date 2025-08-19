@@ -7,7 +7,7 @@ nav_order: 2
 <link rel="stylesheet" href="./assets/css/swiper.css" />
 <link rel="stylesheet" href="./assets/css/events2grid.css" />
 
-<div class="swiper mySwiper">
+<div class="myEventsGrid">
   <div id="events-wrapper" class="swiper-wrapper">
     <!-- Events will be injected here -->
   </div>
@@ -17,25 +17,28 @@ nav_order: 2
   <button id="loadMore" class="btn btn-outline">Load More...</button>
 </div>
 
-<script src="./assets/javascript/swiper.js"></script>
 <script>
   let events = [];
   let currentIndex = 0;
   const batchSize = 12;
   const wrapper = document.getElementById("events-wrapper");
   const loadMoreBtn = document.getElementById("loadMore");
+
   async function fetchEvents() {
     if (events.length === 0) {
+      // fetch your events.json file
       const response = await fetch("{{ '/_data/events.json' | relative_url }}");
       events = await response.json();
     }
     renderEvents();
   }
+
   function renderEvents() {
     const nextBatch = events.slice(currentIndex, currentIndex + batchSize);
+
     nextBatch.forEach(event => {
       const slide = document.createElement("div");
-      slide.className = "swiper-slide";
+      slide.className = "swiper-slide"; // still use for CSS grid styling
       slide.innerHTML = `
         <img class="event-banner" src="${event.image}">
         <div class="event-details">
@@ -49,12 +52,17 @@ nav_order: 2
       `;
       wrapper.appendChild(slide);
     });
+
     currentIndex += nextBatch.length;
+
+    // hide button when all events are loaded
     if (currentIndex >= events.length) {
       loadMoreBtn.style.display = "none";
     }
   }
+
   loadMoreBtn.addEventListener("click", renderEvents);
-  // Initialize
+
+  // render first 12 on page load
   fetchEvents();
 </script>
