@@ -17,7 +17,7 @@ nav_order: 2
   <button id="loadMore" class="btn btn-outline">Load More...</button>
 </div>
 
-<!-- 🔹 Embed all events JSON directly in the page -->
+<!-- 🔹 Embed JSON inline so JS can read it -->
 <script id="events-data" type="application/json">
   {{ site.data.events | jsonify }}
 </script>
@@ -36,6 +36,20 @@ nav_order: 2
     }
   }
 
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString(undefined, { 
+      month: "long", 
+      day: "numeric", 
+      year: "numeric" 
+    });
+  }
+
+  function formatTime(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  }
+
   function renderEvents() {
     getEvents();
 
@@ -43,16 +57,17 @@ nav_order: 2
 
     nextBatch.forEach(event => {
       const slide = document.createElement("div");
-      slide.className = "swiper-slide"; // still use CSS class for styling
+      slide.className = "swiper-slide"; // still using for CSS layout
       slide.innerHTML = `
-        <img class="event-banner" src="${event.image}">
+        <img class="event-banner" src="${event.image}" alt="Banner for ${event.title}">
         <div class="event-details">
           <h3 class="event-title">${event.title}</h3>
-          <div class="event-date">${new Date(event.start).toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" })}</div>
-          <div class="event-time">${new Date(event.start).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</div>
+          <div class="event-date">${formatDate(event.start)}</div>
+          <div class="event-time">${formatTime(event.start)} – ${formatTime(event.end)}</div>
+          <div class="event-location">${event.location || ""}</div>
         </div>
         <div class="event-register-cell">
-          <a href="${event.url}" class="register-button">Register</a>
+          <a href="${event.url}" class="register-button" target="_blank" rel="noopener">Register</a>
         </div>
       `;
       wrapper.appendChild(slide);
@@ -60,6 +75,7 @@ nav_order: 2
 
     currentIndex += nextBatch.length;
 
+    // hide Load More if done
     if (currentIndex >= events.length) {
       loadMoreBtn.style.display = "none";
     }
@@ -67,6 +83,6 @@ nav_order: 2
 
   loadMoreBtn.addEventListener("click", renderEvents);
 
-  // render first 12 on page load
+  // render first 12 on load
   renderEvents();
 </script>
