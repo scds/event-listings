@@ -17,6 +17,11 @@ nav_order: 2
   <button id="loadMore" class="btn btn-outline">Load More...</button>
 </div>
 
+<!-- 🔹 Embed all events JSON directly in the page -->
+<script id="events-data" type="application/json">
+  {{ site.data.events | jsonify }}
+</script>
+
 <script>
   let events = [];
   let currentIndex = 0;
@@ -24,21 +29,21 @@ nav_order: 2
   const wrapper = document.getElementById("events-wrapper");
   const loadMoreBtn = document.getElementById("loadMore");
 
-  async function fetchEvents() {
+  function getEvents() {
     if (events.length === 0) {
-      // fetch your events.json file
-      const response = await fetch("{{ '/_data/events.json' | relative_url }}");
-      events = await response.json();
+      const raw = document.getElementById("events-data").textContent;
+      events = JSON.parse(raw);
     }
-    renderEvents();
   }
 
   function renderEvents() {
+    getEvents();
+
     const nextBatch = events.slice(currentIndex, currentIndex + batchSize);
 
     nextBatch.forEach(event => {
       const slide = document.createElement("div");
-      slide.className = "swiper-slide"; // still use for CSS grid styling
+      slide.className = "swiper-slide"; // still use CSS class for styling
       slide.innerHTML = `
         <img class="event-banner" src="${event.image}">
         <div class="event-details">
@@ -55,7 +60,6 @@ nav_order: 2
 
     currentIndex += nextBatch.length;
 
-    // hide button when all events are loaded
     if (currentIndex >= events.length) {
       loadMoreBtn.style.display = "none";
     }
@@ -64,5 +68,5 @@ nav_order: 2
   loadMoreBtn.addEventListener("click", renderEvents);
 
   // render first 12 on page load
-  fetchEvents();
+  renderEvents();
 </script>
