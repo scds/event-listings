@@ -12,12 +12,6 @@ nav_order: 2
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./assets/js/swiper-bundle.min.js"></script>
 
-- <a href="index">Intro</a>
-- <a href="style-2">Template 2 Slider with Coloured Slides</a>
-- <a href="events-carousel">Template 2 Slider with No BG</a>
-- <a href="style-2-grid">Template 2 Grid Style</a>
-
-
 <!-- Slider main container -->
 <div class="swiper-button-next"></div>
 <div class="swiper-button-prev"></div>
