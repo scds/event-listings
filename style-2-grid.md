@@ -9,6 +9,8 @@ nav_order: 2
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./assets/js/swiper-bundle.min.js"></script>
 
+<pre>{{ site.data.events | jsonify }}</pre>
+
 <div class="swiper mySwiper">
   <div class="swiper-wrapper" id="events-container"></div>
 </div>
@@ -18,7 +20,7 @@ nav_order: 2
 
 <!-- Embed JSON into page -->
 <script>
-  const eventsData = {{ site.data.events | jsonify }};
+  const eventsData = {{ site.data.events | jsonify | escape }};
   let currentIndex = 0;
   const batchSize = 12;
 
