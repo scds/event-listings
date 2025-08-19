@@ -24,7 +24,8 @@ line-height: 1.4;
 cursor:grab;
 text-align: center;
 font-size: 18px;
-display: block;
+display: flex;
+flex-direction:column;
 justify-content: center;
 align-items: center;
 border-radius:1rem;
@@ -114,7 +115,7 @@ text-decoration: none;
 
 @media screen and (min-width: 960px){
 .swiper-slide{
-  height:400px;
+  height:450px;
 }
 }
 
