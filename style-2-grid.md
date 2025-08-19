@@ -24,7 +24,6 @@ nav_order: 2
   const batchSize = 12;
   const wrapper = document.getElementById("events-wrapper");
   const loadMoreBtn = document.getElementById("loadMore");
-
   async function fetchEvents() {
     if (events.length === 0) {
       const response = await fetch("{{ '/_data/events.json' | relative_url }}");
@@ -32,10 +31,8 @@ nav_order: 2
     }
     renderEvents();
   }
-
   function renderEvents() {
     const nextBatch = events.slice(currentIndex, currentIndex + batchSize);
-
     nextBatch.forEach(event => {
       const slide = document.createElement("div");
       slide.className = "swiper-slide";
@@ -52,16 +49,12 @@ nav_order: 2
       `;
       wrapper.appendChild(slide);
     });
-
     currentIndex += nextBatch.length;
-
     if (currentIndex >= events.length) {
       loadMoreBtn.style.display = "none";
     }
   }
-
   loadMoreBtn.addEventListener("click", renderEvents);
-
   // Initialize
   fetchEvents();
 </script>
