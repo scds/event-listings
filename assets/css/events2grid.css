@@ -21,6 +21,10 @@
   padding: 0px !important;
 }
 
+.main-content{
+  line-height: 1.4;
+}
+
 .swiper-wrapper{
   display:grid;
   grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
