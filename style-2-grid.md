@@ -4,27 +4,64 @@ title: Upcoming SCDS Events Grid
 nav_order: 2 
 ---
 
-<link
-  rel="stylesheet"
-  href="./assets/css/swiper.css"
-/>
-<link rel="stylesheet" href="./assets/css/events2grid.css">
+<link rel="stylesheet" href="./assets/css/swiper.css" />
+<link rel="stylesheet" href="./assets/css/events2grid.css" />
 
 <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-{% for event in site.data.events %}
-<div class="swiper-slide">
-        <img class="event-banner" src="{{ event.image }}">
+  <div id="events-wrapper" class="swiper-wrapper">
+    <!-- Events will be injected here -->
+  </div>
+</div>
+
+<div style="text-align:center; margin-top: 1em;">
+  <button id="loadMore" class="btn btn-outline">Load More...</button>
+</div>
+
+<script src="./assets/javascript/swiper.js"></script>
+<script>
+  let events = [];
+  let currentIndex = 0;
+  const batchSize = 12;
+  const wrapper = document.getElementById("events-wrapper");
+  const loadMoreBtn = document.getElementById("loadMore");
+
+  async function fetchEvents() {
+    if (events.length === 0) {
+      const response = await fetch("{{ '/_data/events.json' | relative_url }}");
+      events = await response.json();
+    }
+    renderEvents();
+  }
+
+  function renderEvents() {
+    const nextBatch = events.slice(currentIndex, currentIndex + batchSize);
+
+    nextBatch.forEach(event => {
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      slide.innerHTML = `
+        <img class="event-banner" src="${event.image}">
         <div class="event-details">
-          <h3 class="event-title">{{ event.title }}</h3>
-          <div class="event-date">{{ event.start | date: "%B %d, %Y" }}</div>
-          <div class="event-time">{{ event.start | date: "%I:%M %p" }}</div>
-          <div class="event-location"></div>
+          <h3 class="event-title">${event.title}</h3>
+          <div class="event-date">${new Date(event.start).toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" })}</div>
+          <div class="event-time">${new Date(event.start).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</div>
         </div>
         <div class="event-register-cell">
-          <a href="{{ event.url }}" class="register-button">Register</a>
+          <a href="${event.url}" class="register-button">Register</a>
         </div>
-    </div>
-{% endfor %}
-    </div>
-  </div>
+      `;
+      wrapper.appendChild(slide);
+    });
+
+    currentIndex += nextBatch.length;
+
+    if (currentIndex >= events.length) {
+      loadMoreBtn.style.display = "none";
+    }
+  }
+
+  loadMoreBtn.addEventListener("click", renderEvents);
+
+  // Initialize
+  fetchEvents();
+</script>
