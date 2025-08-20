@@ -18,7 +18,7 @@ nav_order: 2
           <div class="event-location"></div>
         </div>
         <div class="event-register-cell">
-          <a href="{{ event.url }}" class="register-button">Register</a>
+          <a href="{{ event.url }}" class="register-button" target="_blank">Register</a>
         </div>
     </div>
 {% endfor %}

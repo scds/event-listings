@@ -29,6 +29,7 @@ flex-direction:column;
 border-radius:1rem;
 color: #000;
 padding:10px;
+background: var(--light-blue);
 
 &:nth-child(3n-1) {
   background: var(--light-green) !important;
