@@ -11,6 +11,9 @@
     box-sizing: border-box;
 }
 
+hr{
+  display:none;
+}
 
 .swiper {
     width: 100%;

@@ -15,6 +15,10 @@
 line-height: 1.4;
 }
 
+hr{
+  display:none;
+}
+
 .swiper {
   width: 88%;
   height: 100%;

@@ -11,9 +11,16 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color:#313844;
+}
+
+hr{
+  display:none;
+}
+
 .main-content{
 line-height: 1.4;
-background-color:#313844;
 }
 
 .swiper {
