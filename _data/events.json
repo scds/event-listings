@@ -20,6 +20,16 @@
     "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1752790818.png"
   },
   {
+    "uid": "LibCal-7565-3929200",
+    "title": "Research   Lab Notebooks: Research Data Management Community of Practice",
+    "start": "2025-09-25T15:00:00.000Z",
+    "end": "2025-09-25T16:00:00.000Z",
+    "description": "Are you curious about organizing your research better? Join us for our first roundtable of the season September 25 from 11 AM - 12 PM on Research and Lab Notebooks.\n\nNotebooks are important records of decision-making, results, and processes during research. Although many researchers still use paper notebooks, electronic tools protect against data loss, enhance searching, and validate findings through permissions and signatures. While McMaster University does not offer dedicated software, we'll hear from researchers across disciplines about how they're making it work with available tools. We'll talk configuring workflows, setting up version control, which tools you avoid, onboarding students and new researchers, and other practical details.\n\nAround the table this month:\n\n\n\tDr. Sara Andres (Biochemistry and Biomedical Sciences) introduces how she's configured OneNote\n\tDr. Andrew McArthur (Biochemistry and Biomedical Sciences) shares his GitLab setup\n\tAkacia Propst (The/La Collaborative - Philosophy) discusses a Research Documentation template\n\tDr. Andy Roddick (Anthropology) outlines using Obsidian to build connections in a mass of information\n\n\nHere is the meeting link. Learn more and join the RDM community!",
+    "location": null,
+    "url": "https://libcal.mcmaster.ca/calendar/scds/rdm-sep",
+    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1755538674.png"
+  },
+  {
     "uid": "LibCal-7565-3916870",
     "title": "Best Practices for Managing Data in your Research",
     "start": "2025-10-01T14:30:00.000Z",
