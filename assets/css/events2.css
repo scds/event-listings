@@ -20,7 +20,9 @@ hr{
 }
 
 .main-content{
-line-height: 1.4;
+  line-height: 1.4;
+  max-width: 2300px;
+  margin:auto;
 }
 
 .swiper {
