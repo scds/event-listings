@@ -7,7 +7,7 @@ const fs = require('fs');
 function toEST(date) {
   // get UTC timestamp, then subtract 5 hours
   const est = new Date(date.getTime() - (5 * 60 * 60 * 1000));
-  return est.toISOString().replace('Z', '-05:00'); 
+  return est.toISOString().replace('Z', '-04:00'); 
 }
 
 // Fetch iCal and expand recurring events
