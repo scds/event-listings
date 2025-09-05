@@ -3,6 +3,13 @@ const IcalExpander = require('ical-expander');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
+// 🔹 Convert Date → ISO string in strict EST (UTC-5)
+function toEST(date) {
+  // get UTC timestamp, then subtract 5 hours
+  const est = new Date(date.getTime() - (5 * 60 * 60 * 1000));
+  return est.toISOString().replace('Z', '-05:00'); 
+}
+
 // Fetch iCal and expand recurring events
 async function getExpandedEvents() {
   const res = await fetch('https://libcal.mcmaster.ca/ical_subscribe.php?src=p&cid=7565');
@@ -21,8 +28,8 @@ async function getExpandedEvents() {
     events.push({
       uid: event.uid,
       title: event.summary,
-      start: event.startDate.toJSDate(),
-      end: event.endDate.toJSDate(),
+      start: toEST(event.startDate.toJSDate()),
+      end: toEST(event.endDate.toJSDate()),
       description: event.description,
       location: event.location,
       url: event.component.getFirstPropertyValue('url') || ''
@@ -34,8 +41,8 @@ async function getExpandedEvents() {
     events.push({
       uid: occ.item.uid,
       title: occ.item.summary,
-      start: occ.startDate.toJSDate(),
-      end: occ.endDate.toJSDate(),
+      start: toEST(occ.startDate.toJSDate()),
+      end: toEST(occ.endDate.toJSDate()),
       description: occ.item.description,
       location: occ.item.location,
       url: occ.item.component.getFirstPropertyValue('url') || ''
@@ -43,7 +50,7 @@ async function getExpandedEvents() {
   });
 
   // Sort chronologically
-  events.sort((a, b) => a.start - b.start);
+  events.sort((a, b) => new Date(a.start) - new Date(b.start));
 
   return events;
 }
@@ -67,7 +74,7 @@ async function fetchImageFromUrl(url) {
 
   for (const event of events) {
     event.image = await fetchImageFromUrl(event.url);
-    console.log(`🖼️ ${event.title}: ${event.image}`);
+    console.log(`🖼️ ${event.title}: ${event.start} → ${event.end}`);
   }
 
   fs.writeFileSync('_data/events.json', JSON.stringify(events, null, 2));
