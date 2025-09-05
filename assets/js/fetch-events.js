@@ -5,8 +5,8 @@ const fs = require('fs');
 
 // 🔹 Convert Date → ISO string in strict EST (UTC-5)
 function toEST(date) {
-  // get UTC timestamp, then subtract 5 hours
-  const est = new Date(date.getTime() - (5 * 60 * 60 * 1000));
+  // get UTC timestamp, then subtract 4 hours
+  const est = new Date(date.getTime() - (4 * 60 * 60 * 1000));
   return est.toISOString().replace('Z', '-04:00'); 
 }
 
