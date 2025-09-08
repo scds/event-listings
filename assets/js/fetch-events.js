@@ -3,12 +3,32 @@ const IcalExpander = require('ical-expander');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
-// 🔹 Convert Date → ISO string in strict EST (UTC-5)
-function toEST(date) {
-  // get UTC timestamp, then subtract 4 hours
-  const est = new Date(date.getTime() - (4 * 60 * 60 * 1000));
-  return est.toISOString().replace('Z', '-04:00'); 
+// 🔹 Convert Date → ISO string with EST/EDT label
+function toEastern(date) {
+  const options = {
+    timeZone: "America/Toronto", // auto-switches EST/EDT
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+    timeZoneName: "short" // gives "EST" or "EDT"
+  };
+
+  const parts = new Intl.DateTimeFormat("en-CA", options).formatToParts(date);
+  const get = type => parts.find(p => p.type === type)?.value;
+
+  const iso =
+    `${get("year")}-${get("month")}-${get("day")}T` +
+    `${get("hour")}:${get("minute")}:${get("second")}`;
+
+  const zone = get("timeZoneName"); // "EST" or "EDT"
+
+  return `${iso} ${zone}`;
 }
+
 
 // Fetch iCal and expand recurring events
 async function getExpandedEvents() {
@@ -41,8 +61,8 @@ async function getExpandedEvents() {
     events.push({
       uid: occ.item.uid,
       title: occ.item.summary,
-      start: toEST(occ.startDate.toJSDate()),
-      end: toEST(occ.endDate.toJSDate()),
+      start: toEastern(occ.startDate.toJSDate()),
+      end: toEastern(occ.endDate.toJSDate()),
       description: occ.item.description,
       location: occ.item.location,
       url: occ.item.component.getFirstPropertyValue('url') || ''
