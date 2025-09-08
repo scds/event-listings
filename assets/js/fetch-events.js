@@ -48,8 +48,8 @@ async function getExpandedEvents() {
     events.push({
       uid: event.uid,
       title: event.summary,
-      start: toEST(event.startDate.toJSDate()),
-      end: toEST(event.endDate.toJSDate()),
+      start: toEastern(event.startDate.toJSDate()),
+      end: toEastern(event.endDate.toJSDate()),
       description: event.description,
       location: event.location,
       url: event.component.getFirstPropertyValue('url') || ''
