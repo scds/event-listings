@@ -3,6 +3,7 @@ const IcalExpander = require('ical-expander');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
+// 🔹 Convert date to EST/EDT
 // 🔹 Convert Date → ISO string with EST/EDT label
 function toEastern(date) {
   const options = {
@@ -18,7 +19,12 @@ function toEastern(date) {
   };
 
   const parts = new Intl.DateTimeFormat("en-CA", options).formatToParts(date);
-  const get = type => parts.find(p => p.type === type)?.value;
+
+  // helper function to get a part by type
+  function get(type) {
+    const found = parts.find(p => p.type === type);
+    return found ? found.value : "";
+  }
 
   const iso =
     `${get("year")}-${get("month")}-${get("day")}T` +
@@ -28,6 +34,7 @@ function toEastern(date) {
 
   return `${iso} ${zone}`;
 }
+
 
 
 // Fetch iCal and expand recurring events
