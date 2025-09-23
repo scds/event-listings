@@ -4,7 +4,6 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 
 // 🔹 Convert date to EST/EDT
-// 🔹 Convert Date → ISO string with EST/EDT label
 function toEastern(date) {
   const options = {
     timeZone: "America/Toronto", // auto-switches EST/EDT
