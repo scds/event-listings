@@ -18,7 +18,7 @@ function getEventUrl(ev) {
 }
 
 function getEventImage(ev) {
-  if (ev.image_url) return ev.image_url.startsWith('http') ? ev.image_url : `https://${domain}${ev.image_url}`;
+  if (ev.featured_image) return ev.featured_image.startsWith('http') ? ev.featured_image : `https://${domain}${ev.featured_image}`;
   if (ev.location && ev.location.image) return ev.location.image.startsWith('http') ? ev.location.image : `https://${domain}${ev.location.image}`;
   if (ev.description) {
     const imgMatch = ev.description.match(/<img.*?src="(.*?)"/);
@@ -26,6 +26,7 @@ function getEventImage(ev) {
   }
   return "/assets/images/default.jpg";
 }
+
 
 
 // Basic OAuth token exchange for LibCal (1.1): adjust if your instance uses different route
