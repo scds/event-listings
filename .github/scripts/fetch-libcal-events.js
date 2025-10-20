@@ -9,6 +9,14 @@ const calendarId = process.env.LIBCAL_CALENDAR_ID;
 
 console.log('Requesting token from:', `https://${domain}/1.1/oauth/token`);
 
+function getEventUrl(ev) {
+  if (!ev) return "#";
+  if (typeof ev.url === "string") return ev.url;
+  if (ev.url && ev.url.public) return ev.url.public;
+  if (ev.reserve_link && typeof ev.reserve_link === "string") return ev.reserve_link;
+  return "#";
+}
+
 // Basic OAuth token exchange for LibCal (1.1): adjust if your instance uses different route
 async function getToken() {
   const tokenUrl = `https://${domain}/1.1/oauth/token`;
@@ -25,6 +33,7 @@ async function getToken() {
   if (!res.ok) throw new Error(`Token request failed: ${res.status} ${res.statusText}`);
   return res.json();
 }
+
 
 async function fetchEvents(accessToken) {
   // Example endpoint; change query params as you need (days, limit, etc.)
