@@ -1,0 +1,132 @@
+---
+layout: minimal
+title: Upcoming SCDS Events Slider
+nav_order: 2 
+---
+
+<link
+  rel="stylesheet"
+  href="./assets/css/swiper.css"
+/>
+<link rel="stylesheet" href="./assets/css/events2.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./assets/js/swiper-bundle.min.js"></script>
+
+<!-- Slider main container -->
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+{% for event in site.data.events %}
+<div class="swiper-slide">
+        <img class="event-banner" src="{{ event.image }}">
+        <div class="event-details">
+          <h3 class="event-title">{{ event.title }}</h3>
+          <div class="event-date">{{ event.start | date: "%B %d, %Y" }}</div>
+          <div class="event-time">{{ event.start | date: "%I:%M %p" }}</div>
+          <div class="event-location"></div>
+        </div>
+        <div class="event-register-cell">
+          <a href="{{ event.url }}" class="register-button" target="_blank">Register</a>
+        </div>
+    </div>
+{% endfor %}
+    </div>
+  </div>
+
+  <!--<div class="swiper-pagination"></div>-->
+
+<script>
+$(document).ready(function() {
+      if ($(window).width() < 660) {
+      var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+});
+  }
+  else if ($(window).width() > 659 && $(window).width() < 1000) {
+  var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+});
+}
+
+else {
+    var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
+  }
+    });
+  
+$(window).resize(function() {
+  if ($(window).width() < 660) {
+      var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+      },
+});
+  }
+  else if ($(window).width() > 659 && $(window).width() < 1000) {
+  var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+});
+}
+else {
+    var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
+  }
+});
+    
+    
+</script>

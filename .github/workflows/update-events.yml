@@ -1,0 +1,41 @@
+name: Update LibCal events
+
+on:
+  schedule:
+    - cron: '*/* 0 * * *'   
+  workflow_dispatch:         
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install deps
+        run: npm ci || npm i
+        working-directory: .
+
+      - name: Fetch LibCal events and write _data/events.json
+        env:
+          LIBCAL_CLIENT_ID: ${{ secrets.LIBCAL_CLIENT_ID }}
+          LIBCAL_CLIENT_SECRET: ${{ secrets.LIBCAL_CLIENT_SECRET }}
+          LIBCAL_DOMAIN: ${{ secrets.LIBCAL_DOMAIN }}
+          LIBCAL_CALENDAR_ID: ${{ secrets.LIBCAL_CALENDAR_ID }}
+        run: node .github/scripts/fetch-libcal-events.js
+
+      - name: Commit events.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/events.json
+          git commit -m "chore: update events.json from LibCal" || echo "no changes"
+          git push
