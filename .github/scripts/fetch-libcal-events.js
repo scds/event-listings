@@ -59,27 +59,33 @@ async function fetchEvents(accessToken) {
 (async () => {
   try {
     const tokenResp = await getToken();
-    const accessToken = tokenResp.access_token || tokenResp.token; // check response shape
+    const accessToken = tokenResp.access_token;
+
+    // Fetch events from LibCal
     const eventsResp = await fetchEvents(accessToken);
 
-    // Normalize to the structure your Jekyll template expects.
-    // Example assumes eventsResp.events exists; inspect the real response and adjust mapping.
+    // <-- Add this line here to inspect the first event -->
+    console.log(eventsResp.events[0]);
+
+    // Map events to the structure your Jekyll site expects
     const events = (eventsResp.events || []).map(ev => ({
       title: ev.title,
-      start: ev.start,          // ISO string
-      url: (ev.url && ev.url.public) || ev.reserve_link || ev.booking_url || "#",
+      start: ev.start,
+      url: getEventUrl(ev),
       location: ev.location_name || (ev.location && ev.location.name) || "",
       image: getEventImage(ev),
       description: ev.description || ""
     }));
 
-    // Ensure _data exists
+    // Ensure _data folder exists
     if (!fs.existsSync('_data')) fs.mkdirSync('_data');
 
+    // Write to JSON
     fs.writeFileSync('_data/events.json', JSON.stringify(events, null, 2), 'utf8');
-    console.log(`Wrote ${events.length} events to _data/events.json`);
+    console.log(`✅ Wrote ${events.length} events to _data/events.json`);
   } catch (err) {
     console.error(err);
     process.exit(1);
   }
 })();
+
