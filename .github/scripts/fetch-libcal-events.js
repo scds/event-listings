@@ -7,25 +7,28 @@ const clientId = process.env.LIBCAL_CLIENT_ID;
 const clientSecret = process.env.LIBCAL_CLIENT_SECRET;
 const calendarId = process.env.LIBCAL_CALENDAR_ID;
 
+console.log('Requesting token from:', `https://${domain}/1.1/oauth/token`);
+
 // Basic OAuth token exchange for LibCal (1.1): adjust if your instance uses different route
 async function getToken() {
   const tokenUrl = `https://${domain}/1.1/oauth/token`;
   const res = await fetch(tokenUrl, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
       grant_type: 'client_credentials',
       client_id: clientId,
       client_secret: clientSecret
     })
   });
-  if (!res.ok) throw new Error('Token request failed: ' + res.statusText);
+
+  if (!res.ok) throw new Error(`Token request failed: ${res.status} ${res.statusText}`);
   return res.json();
 }
 
 async function fetchEvents(accessToken) {
   // Example endpoint; change query params as you need (days, limit, etc.)
-  const eventsUrl = `https://${domain}/1.1/events?calendar_id=${calendarId}&days=60&limit=50`;
+  const eventsUrl = `https://${domain}/1.1/events?cal_id=${calendarId}&days=60&limit=50`;
   const res = await fetch(eventsUrl, {
     headers: { Authorization: `Bearer ${accessToken}` }
   });
