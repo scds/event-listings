@@ -17,6 +17,24 @@ function getEventUrl(ev) {
   return "#";
 }
 
+function getEventImage(ev) {
+  // 1. Use ev.image_url if available
+  if (ev.image_url) return ev.image_url.startsWith('http') ? ev.image_url : `https://${domain}${ev.image_url}`;
+
+  // 2. Use location image if available
+  if (ev.location && ev.location.image) return ev.location.image.startsWith('http') ? ev.location.image : `https://${domain}${ev.location.image}`;
+
+  // 3. Optional: extract first <img> from description HTML
+  if (ev.description) {
+    const imgMatch = ev.description.match(/<img.*?src="(.*?)"/);
+    if (imgMatch && imgMatch[1]) return imgMatch[1].startsWith('http') ? imgMatch[1] : `https://${domain}${imgMatch[1]}`;
+  }
+
+  // 4. Fallback to default image
+  return "/assets/images/default.jpg";
+}
+
+
 // Basic OAuth token exchange for LibCal (1.1): adjust if your instance uses different route
 async function getToken() {
   const tokenUrl = `https://${domain}/1.1/oauth/token`;
@@ -58,7 +76,7 @@ async function fetchEvents(accessToken) {
       start: ev.start,          // ISO string
       url: (ev.url && ev.url.public) || ev.reserve_link || ev.booking_url || "#",
       location: ev.location_name || (ev.location && ev.location.name) || "",
-      image: ev.image_url || "/assets/images/default.jpg",
+      image: getEventImage(ev),
       description: ev.description || ""
     }));
 
