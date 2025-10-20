@@ -56,9 +56,9 @@ async function fetchEvents(accessToken) {
     const events = (eventsResp.events || []).map(ev => ({
       title: ev.title,
       start: ev.start,          // ISO string
-      url: (ev.url && ev.url.public) || ev.reserve_link || ev.booking_url || "#"
-      location: ev.location_name || (ev.location && ev.location.name) || ""
-      image: ev.image_url || "/assets/images/default.jpg"
+      url: (ev.url && ev.url.public) || ev.reserve_link || ev.booking_url || "#",
+      location: ev.location_name || (ev.location && ev.location.name) || "",
+      image: ev.image_url || "/assets/images/default.jpg",
       description: ev.description || ""
     }));
 
