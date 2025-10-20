@@ -49,7 +49,7 @@ async function getToken() {
 
 async function fetchEvents(accessToken) {
   // Example endpoint; change query params as you need (days, limit, etc.)
-  const eventsUrl = `https://${domain}/1.1/events?cal_id=${calendarId}&days=60&limit=50`;
+  const eventsUrl = `https://${domain}/1.1/events?cal_id=${calendarId}&days=300&limit=50`;
   const res = await fetch(eventsUrl, {
     headers: { Authorization: `Bearer ${accessToken}` }
   });
