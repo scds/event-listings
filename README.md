@@ -4,7 +4,7 @@ A widget to add upcoming SCDS events to scds.ca
 
 ## Purpose
 
-This repository contains a GitHub site of an SCDS events widget so that other websites (like scds.ca) can embed it into their pages. The events are from McMaster's SCDS LibCal, and are not connected through API calls, but through a web scraper script.
+This repository contains a GitHub site of an SCDS events widget so that other websites (like scds.ca) can embed it into their pages. The events are from McMaster's SCDS LibCal, through LibCal's API.
 
 ## How to Use
 
@@ -41,9 +41,8 @@ To add the events carousel to any other page, use the following iframe code:
 
 ### Adding/updating Events Manually
 
-To add or update the events that are listed, you have to modify `_data/events.json`. 
+To manually add or update the events that are listed, you have to modify `_data/events.json`. Otherwise, events will be automatically updated based on what is on McMaster SCDS' Libcal.
 
-When an event is over or a new event is added, update the information in `_data/events.json`. This can be done manually or through automation.
 
 In `_data/events.json`, an event will have the following data. To remove the event manually, erase the event's information along with its opening and closing brackets {} and any comma that follows. 
 
@@ -58,52 +57,15 @@ The event's information includes:
 - "url": LibCal URL of event for registration
 - "image": Image URL of event from the event's LibCal page. Event images are not stored in this event-listings github repository.
 
-### Adding/updating Events Automatically (Must be Done Locally)
-
-Clone this repository onto your computer. Go to your computer's terminal and locate where you want this repository to be cloned.
-
-Install node.js to your computer. Download link is at nodejs.org/en/download
-
-Open your computer terminal and locate the event-listings repository. For example, if event-listings was cloned in your Documents folder, type the following into terminal:
-
-```cd Documents/event-listings/```
-
-Update events by typing the following into the terminal:
-
-```node assets/js/fetch-events.js```
-
-This will populate `_data/events.json` with updated events information.
-
-Then type the following in terminal:
-
-```git commit --all```
-
-The terminal will change to something like the following.
-
-<img src="/assets/img/tut-1-terminal.png">
-
-Type 'a' which will allow you to add a commit message. In this case, it would be `updated events`.
-
-<img src="/assets/img/tut-2-terminal.png">
-
-Once done, press the esc button, type `:wq` and press enter, which will allow you to escape the message window.
-
-Finally, enter the following in terminal:
-
-```git push```
-
-Press enter. 
-
-The updated events will now populate onto the event widgets. You're done!
-
 
 ### Relevant Backend Search Code
 
 If edits to the code are required, see the below.
 
-- `assets/js/fetch-events.js` scrapes data from [SCDS's LibCal]("https://libcal.mcmaster.ca/calendar/scds?cid=7565&t=g&d=0000-00-00&cal=7565&inc=0"), which includes the event image banner, the event link, event time and location.
+- `assets/js/fetch-events.js` scrapes data from [SCDS's LibCal]("https://libcal.mcmaster.ca/calendar/scds?cid=7565&t=g&d=0000-00-00&cal=7565&inc=0"), which includes the event image banner, the event link, event time and location, without LibCal's API call.
+- `.github/scripts/fetch-libcal-events.js` fetches events automatically from [SCDS's LibCal]("https://libcal.mcmaster.ca/calendar/scds?cid=7565&t=g&d=0000-00-00&cal=7565&inc=0") through API call
 - `style-2-grid.md` and `events-carousel` and their respective css styles dictate how the events are displayed and styled.
-- `events.json`: an automatically generated file that compiles the events information fetched by fetch-events.js. 
+- `events.json`: an automatically generated file that compiles the events information fetched by fetch event scripts. 
 ## Credits
 
 Made by Tram Nguyen.
