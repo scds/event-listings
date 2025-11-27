@@ -1,13 +1,5 @@
 [
   {
-    "title": "Making and Querying Databases in SQL with DuckDB",
-    "start": "2025-11-26T14:00:00-05:00",
-    "url": "https://libcal.mcmaster.ca/event/3920907",
-    "location": "",
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753716576.png",
-    "description": "<p>Want to work with structured data more efficiently? SQL (Structured Query Language) is a powerful tool for managing and analyzing data and it&rsquo;s easier to get started than you might think.</p>\n\n<p>This beginner-friendly workshop introduces SQL using DuckDB, a lightweight, cross-platform database that runs locally and requires no setup. Through hands-on practice, you&rsquo;ll learn how to create a database, add data to it, and write queries to find the information you need.</p>\n\n<p>By the end of this session, participants will be able to:</p>\n\n<ul>\n\t<li>Understand the basic structure and purpose of SQL</li>\n\t<li>Create and populate a DuckDB database</li>\n\t<li>Write and run basic SQL queries to explore and extract data</li>\n</ul>\n\n<p>This session is ideal for beginners in data analysis, researchers, and students who want a gentle introduction to databases using a simple and powerful tool. No prior experience required!</p>\n\n<p><strong>Details:</strong>&nbsp;Any preparatory work for the session can be found on its <a href=\"https://learn.scds.ca/dmds25-26/sql-duckdb.html\">information page</a>.&nbsp;This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre&#39;s&nbsp;<a href=\"https://scds.ca/searchable-online-learning/\">Online Learning Catalogue.</a></p>\n\n<p><strong>Facilitator Bio:</strong>&nbsp;John Fink is the Digital Scholarship Librarian in the Sherman Centre.</p>\n\n<p><strong>Certificate Eligibility:</strong>&nbsp;This workshop is eligible for the Sherman Centre&#39;s certificate program. For more information, visit <a href=\"http://scds.ca/certificate-program\">scds.ca/certificate-program</a>. It is also eligible for the Canadian Certificate for Digital Humanities. To learn more, visit <a href=\"http://ccdhhn.ca\">ccdhhn.ca</a> or contact <a href=\"mailto:scds@mcmaster.ca\">scds@mcmaster.ca</a>.</p>\n\n<p><strong>Credit Eligibility:&nbsp;</strong>This workshop counts toward credit for students in the Faculty of Science who are enrolled in SCIENCE 2SF1: Digital Skills Workshop. For any questions, please contact <a href=\"mailto:oursci@mcmaster.ca\">oursci@mcmaster.ca</a>.</p>"
-  },
-  {
     "title": "Creating and Sharing Maps using ArcGIS Online",
     "start": "2025-11-27T10:30:00-05:00",
     "url": "https://libcal.mcmaster.ca/event/3918358",
