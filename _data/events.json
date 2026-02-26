@@ -1,13 +1,5 @@
 [
   {
-    "title": "Build Your Own Chatbot: Local Applications in Generative AI on your Laptop",
-    "start": "2026-02-25T13:00:00-05:00",
-    "url": "https://libcal.mcmaster.ca/event/3987824",
-    "location": "Sherman Centre for Digital Scholarship (1st Floor, Mills Library)",
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1767984682.png",
-    "description": "<p>Most people know cloud-based generative AI tools like ChatGPT, but did you know that the powerful technology behind them, transformer-based Large Language Models (LLMs), can also run directly on a modern laptop?</p>\n\n<p>In this hands-on, in-person workshop, you&rsquo;ll explore how these AI systems work and learn how to set up and run a basic chatbot locally on your own computer. Gain a foundational understanding of transformer-based LLMs and discover how to harness their power without relying on the cloud.</p>\n\n<p>By the end of this session, participants will be able to:</p>\n\n<ul>\n\t<li>Understand the core principles behind transformer-based large language models</li>\n\t<li>Set up and run a basic chatbot AI on a personal laptop</li>\n\t<li>Explore practical applications and limitations of locally hosted generative AI</li>\n</ul>\n\n<p>This session is perfect for anyone curious about AI who wants to experiment with running models independently!</p>\n\n<p><strong>Details:</strong>&nbsp;Any preparatory work for the session can be found on its&nbsp;<a href=\"https://learn.scds.ca/dmds25-26/build-chatbot2.html\">information page</a>.&nbsp;This workshop will not be recorded.</p>\n\n<p><strong>Facilitator Bio:</strong>&nbsp;</p>\n\n<p><strong>John Fink</strong>&nbsp;is the Digital Scholarship Librarian in the Sherman Centre.</p>\n\n<p><strong>Certificate Eligibility:</strong>&nbsp;This workshop is eligible for the Sherman Centre&#39;s certificate program. For more information, visit&nbsp;<a href=\"http://scds.ca/certificate-program\">scds.ca/certificate-program</a>. It is also eligible for the Canadian Certificate for Digital Humanities. To learn more, visit&nbsp;<a href=\"http://ccdhhn.ca/\">ccdhhn.ca</a>&nbsp;or contact&nbsp;<a href=\"mailto:scds@mcmaster.ca\">scds@mcmaster.ca</a>.</p>\n\n<p><strong>Credit Eligibility:&nbsp;</strong>This workshop counts toward credit for students in the Faculty of Science who are enrolled in SCIENCE 2SF1: Digital Skills Workshop. For any questions, please contact&nbsp;<a href=\"mailto:oursci@mcmaster.ca\">oursci@mcmaster.ca</a>.</p>"
-  },
-  {
     "title": "Dashboards: Visualizing and Analyzing Data on the Go",
     "start": "2026-02-26T11:00:00-05:00",
     "url": "https://libcal.mcmaster.ca/event/3996363",
