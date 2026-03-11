@@ -1,13 +1,5 @@
 [
   {
-    "title": "Create an Interactive Dashboard using ArcGIS",
-    "start": "2026-03-10T10:30:00-04:00",
-    "url": "https://libcal.mcmaster.ca/event/3920112",
-    "location": "",
-    "image": "https://devgj00vx92jb.cloudfront.net/data/feat_img/4102/7565/1753413504.png",
-    "description": "<p>Need to present data in a way that&#39;s visual, interactive, and easy to understand? ArcGIS Dashboards lets you combine maps, charts, and text to create web-based dashboards that clearly communicate your data&rsquo;s story.</p>\n\n<p>In this beginner-friendly workshop, you&#39;ll learn how to use ArcGIS Dashboards to display and explore openly available data through dynamic maps and charts&mdash;no prior experience needed. We will walk through creating a basic map and designing a dashboard that helps convey meaningful information to your audience through clear visual elements.</p>\n\n<p>By the end of the session, participants will be able to:</p>\n\n<ul>\n\t<li>Use data from an open data portal to create a map in ArcGIS Online</li>\n\t<li>Design, build, and publish an interactive dashboard using ArcGIS Dashboards</li>\n</ul>\n\n<p>This session is ideal for anyone looking to present data in clear and engaging ways.</p>\n\n<p><strong>Details:</strong>&nbsp;Any preparatory work for the session can be found on its <a href=\"https://learn.scds.ca/dash25-26/arcgis-dashboards.html\">information page</a>.&nbsp;This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre&#39;s&nbsp;<a href=\"https://scds.ca/searchable-online-learning/\">Online Learning Catalogue.</a></p>\n\n<p><strong>Facilitator Bio:</strong>&nbsp;Christine Homuth<strong> </strong>(she/her) is the Library&#39;s GIS Specialist, providing support and resources to students, researchers, and faculty members working with Geographic Information Systems (GIS) and geospatial data.</p>\n\n<p><strong>Certificate Eligibility:</strong>&nbsp;This workshop is eligible for the Sherman Centre&#39;s certificate program. For more information, visit <a href=\"http://scds.ca/certificate-program\">scds.ca/certificate-program</a>.&nbsp;</p>\n\n<p><strong>Credit Eligibility:&nbsp;</strong>This workshop counts toward credit for students in the Faculty of Science who are enrolled in SCIENCE 2SF1: Digital Skills Workshop. For any questions, please contact <a href=\"mailto:oursci@mcmaster.ca\">oursci@mcmaster.ca</a>.</p>"
-  },
-  {
     "title": "Social Media Data! Practical and Ethical Collection, Visualization, and Management",
     "start": "2026-03-19T13:00:00-04:00",
     "url": "https://libcal.mcmaster.ca/event/3920113",
