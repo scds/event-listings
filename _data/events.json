@@ -1,13 +1,5 @@
 [
   {
-    "title": "Creating Documents with LaTeX",
-    "start": "2026-09-28T15:30:00-04:00",
-    "url": "https://libcal.mcmaster.ca/event/4050428",
-    "location": "",
-    "image": "https://devgj00vx92jb.cloudfront.net/misc/4102/events/7565/2026_08_13_17_15_27.png",
-    "description": "<p>This workshop will introduce you to LaTeX, a typesetting system commonly used in STEM disciplines to create high-quality documents and easily write mathematical equations. We will discuss tools for writing in LaTeX, the structural elements of LaTeX, text formatting, and commands for writing mathematical equations. Whether you are preparing academic assignments, research manuscripts, or technical documents, this session will provide a practical foundation for getting started with LaTeX.</p>\n\n<p>This session is ideal for students, researchers, and instructors who are new to LaTeX and interested in creating professional-quality academic and technical documents. No prior experience with LaTeX is required.</p>\n\n<p>By the end of this session, participants will be able to:</p>\n\n<ol>\n\t<li>Identify common tools and platforms for writing and compiling LaTeX documents.</li>\n\t<li>Explain the basic structure of a LaTeX document, including the preamble, document body, and sectional organization.</li>\n\t<li>Format text and organize content using core LaTeX commands.</li>\n\t<li>Create and customize common environments, including lists, figures, and equations.</li>\n\t<li>Write and format mathematical expressions within text and display equations using LaTeX syntax.</li>\n\t<li>Develop and compile a simple LaTeX document from start to finish.</li>\n</ol>\n\n<p><strong>Details:</strong>&nbsp;Any preparatory work for the session can be found on its <a href=\"https://learn.scds.ca/dmds26-27/latex.html\">information page.</a>&nbsp;This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre&#39;s&nbsp;<a href=\"https://scds.ca/searchable-online-learning/\">Online Learning Catalogue.</a></p>\n\n<p><strong>Certificate Eligibility:</strong>&nbsp;This workshop is eligible for the Sherman Centre&#39;s certificate program. For more information, visit&nbsp;<a href=\"http://scds.ca/certificate-program\">scds.ca/certificate-program</a>. It is also eligible for the Canadian Certificate for Digital Humanities. To learn more, visit&nbsp;<a href=\"http://ccdhhn.ca/\">ccdhhn.ca</a>&nbsp;or contact&nbsp;<a href=\"mailto:scds@mcmaster.ca\">scds@mcmaster.ca</a>.</p>"
-  },
-  {
     "title": "DORA: Establishing & Maintaining Researcher Profiles",
     "start": "2026-09-29T13:00:00-04:00",
     "url": "https://libcal.mcmaster.ca/event/4050430",
