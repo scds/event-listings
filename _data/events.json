@@ -1,13 +1,5 @@
 [
   {
-    "title": "Getting More Out of LaTeX: Citations, Presentations, and Dissertations",
-    "start": "2026-11-03T13:30:00-05:00",
-    "url": "https://libcal.mcmaster.ca/event/4052849",
-    "location": "",
-    "image": "https://devgj00vx92jb.cloudfront.net/misc/4102/events/7565/2026_08_19_10_01_49.png",
-    "description": "<p>Have you already learned how to create a LaTeX document? Do you already know how to write out beautiful mathematical notation using slash codes? How to insert all the images and table you could ever dream of? And you still want to learn how to get more out of LaTeX? Then this workshop is for you! Learn how LaTeX handles citations, from using .bib files and changing citation styles to integrating the Zotero citation manager with Overleaf. We&rsquo;ll also show you how to create a conference-ready presentation deck without leaving your LaTeX editor. In addition, we&#39;ll explore how to use LaTeX templates for large writing projects such as theses and dissertations.</p>\n\n<p>This session is ideal for students, researchers, and instructors who have prior experience creating and editing basic LaTeX documents and are looking to expand their skills for academic writing, presentations, and long-form projects. Familiarity with LaTeX fundamentals is recommended.</p>\n\n<p>By the end of this session, participants will be able to:</p>\n\n<ol>\n\t<li>Use .bib files to display citations in multiple styles in LaTeX documents</li>\n\t<li>Connect Zotero to Overleaf and add a citation to their document</li>\n\t<li>Create a slide deck using the Beamer LaTeX plugin</li>\n\t<li>Understand how to use a LaTeX template for a large writing project like a dissertation or thesis</li>\n</ol>\n\n<p><strong>Details:</strong>&nbsp;Any preparatory work for the session can be found on its <a href=\"https://learn.scds.ca/dmds26-27/latex-advanced.html\">information page</a>.&nbsp;This virtual workshop will be recorded and shared on the same page, and discoverable via the Sherman Centre&#39;s&nbsp;<a href=\"https://scds.ca/searchable-online-learning/\">Online Learning Catalogue.</a></p>\n\n<p><strong>Certificate Eligibility:</strong>&nbsp;This workshop is eligible for the Sherman Centre&#39;s certificate program. For more information, visit&nbsp;<a href=\"http://scds.ca/certificate-program\">scds.ca/certificate-program</a>. It is also eligible for the Canadian Certificate for Digital Humanities. To learn more, visit&nbsp;<a href=\"http://ccdhhn.ca/\">ccdhhn.ca</a>&nbsp;or contact&nbsp;<a href=\"mailto:scds@mcmaster.ca\">scds@mcmaster.ca</a>.</p>"
-  },
-  {
     "title": "Introduction to R Programming",
     "start": "2026-11-04T13:30:00-05:00",
     "url": "https://libcal.mcmaster.ca/event/4052924",
